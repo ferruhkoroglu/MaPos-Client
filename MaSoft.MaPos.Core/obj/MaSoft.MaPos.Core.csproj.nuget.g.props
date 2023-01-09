@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\FK\.nuget\packages\;C:\Program Files\DevExpress 22.2\Components\Offline Packages</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.4.0</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="C:\Users\FK\.nuget\packages\" />
+    <SourceRoot Include="C:\Program Files\DevExpress 22.2\Components\Offline Packages\" />
+  </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.data.desktop\22.2.3\build\netcoreapp3.0\DevExpress.Data.Desktop.props" Condition="Exists('C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.data.desktop\22.2.3\build\netcoreapp3.0\DevExpress.Data.Desktop.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgDevExpress_Data Condition=" '$(PkgDevExpress_Data)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.data\22.2.3</PkgDevExpress_Data>
+    <PkgDevExpress_Utils Condition=" '$(PkgDevExpress_Utils)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.utils\22.2.3</PkgDevExpress_Utils>
+    <PkgDevExpress_Win_Navigation Condition=" '$(PkgDevExpress_Win_Navigation)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.win.navigation\22.2.3</PkgDevExpress_Win_Navigation>
+    <PkgDevExpress_Win_TreeList Condition=" '$(PkgDevExpress_Win_TreeList)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.win.treelist\22.2.3</PkgDevExpress_Win_TreeList>
+    <PkgDevExpress_Win_Printing Condition=" '$(PkgDevExpress_Win_Printing)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.win.printing\22.2.3</PkgDevExpress_Win_Printing>
+    <PkgDevExpress_Win_VerticalGrid Condition=" '$(PkgDevExpress_Win_VerticalGrid)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.win.verticalgrid\22.2.3</PkgDevExpress_Win_VerticalGrid>
+    <PkgDevExpress_Win_PivotGrid Condition=" '$(PkgDevExpress_Win_PivotGrid)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.win.pivotgrid\22.2.3</PkgDevExpress_Win_PivotGrid>
+    <PkgDevExpress_Win_Grid Condition=" '$(PkgDevExpress_Win_Grid)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.win.grid\22.2.3</PkgDevExpress_Win_Grid>
+    <PkgDevExpress_Win Condition=" '$(PkgDevExpress_Win)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.win\22.2.3</PkgDevExpress_Win>
+  </PropertyGroup>
+</Project>

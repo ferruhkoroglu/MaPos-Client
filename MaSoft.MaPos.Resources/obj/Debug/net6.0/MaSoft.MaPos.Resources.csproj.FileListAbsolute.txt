@@ -1,0 +1,12 @@
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Resources\obj\Debug\net6.0\MaSoft.MaPos.Resources.csproj.AssemblyReference.cache
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Resources\obj\Debug\net6.0\MaSoft.MaPos.Resources.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Resources\obj\Debug\net6.0\MaSoft.MaPos.Resources.AssemblyInfoInputs.cache
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Resources\obj\Debug\net6.0\MaSoft.MaPos.Resources.AssemblyInfo.cs
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Resources\obj\Debug\net6.0\MaSoft.MaPos.Resources.csproj.CoreCompileInputs.cache
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Resources\bin\Debug\net6.0\MaSoft.MaPos.Resources.deps.json
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Resources\bin\Debug\net6.0\MaSoft.MaPos.Resources.dll
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Resources\bin\Debug\net6.0\MaSoft.MaPos.Resources.pdb
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Resources\obj\Debug\net6.0\MaSoft.MaPos.Resources.dll
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Resources\obj\Debug\net6.0\refint\MaSoft.MaPos.Resources.dll
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Resources\obj\Debug\net6.0\MaSoft.MaPos.Resources.pdb
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Resources\obj\Debug\net6.0\ref\MaSoft.MaPos.Resources.dll

@@ -1,0 +1,17 @@
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\bin\Debug\net6.0\MaSoft.MaPos.Windows.Library.deps.json
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\bin\Debug\net6.0\MaSoft.MaPos.Windows.Library.dll
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\bin\Debug\net6.0\MaSoft.MaPos.Windows.Library.pdb
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\obj\Debug\net6.0\MaSoft.MaPos.Windows.Library.csproj.AssemblyReference.cache
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\obj\Debug\net6.0\MaSoft.MaPos.Windows.Library.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\obj\Debug\net6.0\MaSoft.MaPos.Windows.Library.AssemblyInfoInputs.cache
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\obj\Debug\net6.0\MaSoft.MaPos.Windows.Library.AssemblyInfo.cs
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\obj\Debug\net6.0\MaSoft.MaPos.Windows.Library.csproj.CoreCompileInputs.cache
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\obj\Debug\net6.0\MaSoft.MaPos.Windows.Library.dll
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\obj\Debug\net6.0\refint\MaSoft.MaPos.Windows.Library.dll
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\obj\Debug\net6.0\MaSoft.MaPos.Windows.Library.pdb
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\obj\Debug\net6.0\ref\MaSoft.MaPos.Windows.Library.dll
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\bin\Debug\net6.0\MaSoft.MaPos.Models.dll
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\bin\Debug\net6.0\MaSoft.MaPos.Resources.dll
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\bin\Debug\net6.0\MaSoft.MaPos.Models.pdb
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\bin\Debug\net6.0\MaSoft.MaPos.Resources.pdb
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows.Library\obj\Debug\net6.0\MaSoft.MaPos.Windows.Library.csproj.CopyComplete

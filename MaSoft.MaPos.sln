@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaSoft.MaPos.Resources", "MaSoft.MaPos.Resources\MaSoft.MaPos.Resources.csproj", "{E0EDF7F9-9D39-486D-948C-F858C42D321E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaSoft.MaPos.Models", "MaSoft.MaPos.Models\MaSoft.MaPos.Models.csproj", "{20EEBF38-E014-41E9-934A-9DC088378A2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaSoft.MaPos.Windows.Library", "MaSoft.MaPos.Windows.Library\MaSoft.MaPos.Windows.Library.csproj", "{AF9DFAD1-F4F1-4E09-B77B-3752CB97D857}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaSoft.MaPos.Windows", "MaSoft.MaPos.Windows\MaSoft.MaPos.Windows.csproj", "{A0A80998-56A2-4235-95D9-1939A983373B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaSoft.MaPos.Core", "MaSoft.MaPos.Core\MaSoft.MaPos.Core.csproj", "{FB416831-B165-4FCE-B37A-9803B48706EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0EDF7F9-9D39-486D-948C-F858C42D321E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0EDF7F9-9D39-486D-948C-F858C42D321E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0EDF7F9-9D39-486D-948C-F858C42D321E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0EDF7F9-9D39-486D-948C-F858C42D321E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20EEBF38-E014-41E9-934A-9DC088378A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20EEBF38-E014-41E9-934A-9DC088378A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20EEBF38-E014-41E9-934A-9DC088378A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20EEBF38-E014-41E9-934A-9DC088378A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF9DFAD1-F4F1-4E09-B77B-3752CB97D857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF9DFAD1-F4F1-4E09-B77B-3752CB97D857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF9DFAD1-F4F1-4E09-B77B-3752CB97D857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF9DFAD1-F4F1-4E09-B77B-3752CB97D857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0A80998-56A2-4235-95D9-1939A983373B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0A80998-56A2-4235-95D9-1939A983373B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0A80998-56A2-4235-95D9-1939A983373B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0A80998-56A2-4235-95D9-1939A983373B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB416831-B165-4FCE-B37A-9803B48706EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB416831-B165-4FCE-B37A-9803B48706EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB416831-B165-4FCE-B37A-9803B48706EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB416831-B165-4FCE-B37A-9803B48706EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {780CA9D3-BBEC-4345-B64B-EE5065F604D0}
+	EndGlobalSection
+EndGlobal
