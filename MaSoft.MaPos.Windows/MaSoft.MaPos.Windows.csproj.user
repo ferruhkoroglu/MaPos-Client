@@ -5,8 +5,14 @@
     <Compile Update="MaPosLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MaPosMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MaPosSplashForm.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UserControls\mainTileControl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>

@@ -238,9 +238,9 @@
             this.lblDateTimeInfo.Appearance.Options.UseForeColor = true;
             this.lblDateTimeInfo.Location = new System.Drawing.Point(704, 12);
             this.lblDateTimeInfo.Name = "lblDateTimeInfo";
-            this.lblDateTimeInfo.Size = new System.Drawing.Size(110, 19);
+            this.lblDateTimeInfo.Size = new System.Drawing.Size(90, 19);
             this.lblDateTimeInfo.TabIndex = 17;
-            this.lblDateTimeInfo.Text = "labelControl1";
+            this.lblDateTimeInfo.Text = "01.01.2023";
             // 
             // lblComputerName
             // 

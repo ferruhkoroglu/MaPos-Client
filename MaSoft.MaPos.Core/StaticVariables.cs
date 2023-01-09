@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
@@ -40,6 +41,12 @@ namespace MaSoft.MaPos.Core
 
         public static bool AttackMode = false;
         public static string AttackSite = "***";
+
+
+        public static bool   UserAuthenticated = false;
+        public static string UserPassword = "";
+
+        public static CultureInfo cultureInfo = null;
 
         public static string ConnectionString()
         {

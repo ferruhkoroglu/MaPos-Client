@@ -117,3 +117,5 @@ E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-wind
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-windows\MaSoft.MaPos.Core.pdb
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\obj\Debug\net6.0-windows\MaSoft.MaPos.Windows.frmLogin.resources
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\obj\Debug\net6.0-windows\MaSoft.MaPos.Windows.mainTileControl.resources
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\obj\Debug\net6.0-windows\MaSoft.MaPos.Windows.MaPosMainForm.resources

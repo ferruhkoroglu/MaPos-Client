@@ -336,6 +336,10 @@
               "target": "Package",
               "version": "[22.2.3, )"
             },
+            "DevExpress.Win": {
+              "target": "Package",
+              "version": "[22.2.3, )"
+            },
             "DevExpress.Win.Design": {
               "target": "Package",
               "version": "[22.2.*-*, )"

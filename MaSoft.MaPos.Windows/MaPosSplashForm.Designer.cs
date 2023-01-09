@@ -26,7 +26,9 @@ namespace MaSoft.MaPos.Windows {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaPosSplashForm));
+            this.svgImageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.marqueeProgressBarControl1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl)).BeginInit();
@@ -34,6 +36,7 @@ namespace MaSoft.MaPos.Windows {
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).BeginInit();
             this.SuspendLayout();
             // 
             // marqueeProgressBarControl1
@@ -47,6 +50,10 @@ namespace MaSoft.MaPos.Windows {
             // 
             // labelControl1
             // 
+            this.labelControl1.Appearance.Font = ((System.Drawing.Font)(resources.GetObject("labelControl1.Appearance.Font")));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseTextOptions = true;
+            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             resources.ApplyResources(this.labelControl1, "labelControl1");
             // 
             // labelControl2
@@ -92,6 +99,10 @@ namespace MaSoft.MaPos.Windows {
             this.labelProductText.Appearance.Options.UseFont = true;
             this.labelProductText.Appearance.Options.UseForeColor = true;
             // 
+            // svgImageCollection1
+            // 
+            this.svgImageCollection1.Add("mapos", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollection1.mapos"))));
+            // 
             // MaPosSplashForm
             // 
             resources.ApplyResources(this, "$this");
@@ -106,10 +117,13 @@ namespace MaSoft.MaPos.Windows {
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private DevExpress.Utils.SvgImageCollection svgImageCollection1;
     }
 }

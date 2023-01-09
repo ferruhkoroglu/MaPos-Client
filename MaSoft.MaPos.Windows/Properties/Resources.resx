@@ -118,8 +118,44 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="background_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_Calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Camera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_Camera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Finances" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_Finances.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FoodsDrink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_FoodsDrink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Foods_Slide1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_Foods_Slide1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Game" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_Game.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Games" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_Games.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HealthFitness" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_HealthFitness1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HealthFitnes_Slide1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_HealthFitnes_Slide1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HelpTips" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_HelpTips1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InternetExplorer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_InternetExplorer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,7 +163,49 @@
   <data name="logo_1366x780" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo-1366x780.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_Mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mapos_svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mapos.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Maps" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_Maps.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Music" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_Music.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="News" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_News.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="People" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_people.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Photos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_Photos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ReadingList" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_ReadingList.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SkyDrive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_SkyDrive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SplashPicture" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SplashPicture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sports" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_Sports.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Store" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_Store.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Travel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_Travel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Video" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_Video.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Weather" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win8.1_Weather.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

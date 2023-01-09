@@ -9,6 +9,7 @@
       "MaSoft.MaPos.Windows/1.0.0": {
         "dependencies": {
           "DevExpress.Utils": "22.2.3",
+          "DevExpress.Win": "22.2.3",
           "DevExpress.Win.Design": "22.2.3",
           "MaSoft.MaPos.Core": "1.0.0",
           "MaSoft.MaPos.Models": "1.0.0",

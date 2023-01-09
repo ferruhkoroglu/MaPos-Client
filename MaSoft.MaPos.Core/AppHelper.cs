@@ -11,6 +11,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Reflection;
 using System.Windows.Forms;
+using System.Data.SqlTypes;
 
 namespace MaSoft.MaPos.Core
 {
@@ -208,20 +209,6 @@ namespace MaSoft.MaPos.Core
                 StaticVariables.EMailAddress = iniFile.Read("EmailAdress");
                 StaticVariables.Password = iniFile.Read("Password");
 
-                StaticVariables.ServerMode = Convert.ToBoolean(iniFile.Read("ServerMode"));
-                StaticVariables.GroupId = Convert.ToInt32(iniFile.Read("GroupId"));
-
-                // ModemIp
-                try
-                {
-                    //Yeni Özellikler eklenirse...
-                }
-                catch
-                {
-                    //
-                }
-
-
                 // Varsayılan False... 
                 try
                 {
@@ -278,28 +265,34 @@ namespace MaSoft.MaPos.Core
             return hash.ToString();
         }
 
-        public static bool UserAuthentication(string Email, string Password)
+
+        public static bool UserAuthentication(string Password)
         {
             bool result = false;
             try
             {
                 ConnectionOpen();
 
-                string strSQL = " SELECT * FROM Users WITH (NOLOCK)  " +
-                                " WHERE Email = '" + Email + "' AND PasswordMd5 = '" + MD5Hash(Password) + "'";
-
-                using (DataTable tblUsers = new DataTable("Users"))
+                SqlCommand sqlCmd = null;
+                try
                 {
-                    using (SqlDataAdapter daHallNames = new SqlDataAdapter(strSQL, sqlCon))
-                    {
-                        daHallNames.Fill(tblUsers);
+                    sqlCmd = new SqlCommand(" SELECT * FROM Users WITH (NOLOCK)  " +
+                                                                " WHERE Password = @Password", sqlCon);
 
-                        if (tblUsers.DefaultView.Count > 0)
-                        {
-                            result = true;
-                            StaticVariables.TotalCredit = Convert.ToInt32(tblUsers.Rows[0]["TotalCredit"]);
-                        }
-                    }
+                    SqlParameter param = new SqlParameter();
+                    param.ParameterName = "@Password";
+                    param.Value = Password;
+                    sqlCmd.Parameters.Add(param);
+
+                    SqlDataReader rdSQL = sqlCmd.ExecuteReader();
+
+                    if (rdSQL.Read())
+                        result = true;
+                }
+                finally
+                {
+                    sqlCmd.Dispose();
+                    sqlCmd= null;
                 }
             }
             finally

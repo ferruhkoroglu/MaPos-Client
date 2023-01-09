@@ -5857,6 +5857,7 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "DevExpress.Utils >= 22.2.3",
+      "DevExpress.Win >= 22.2.3",
       "DevExpress.Win.Design >= 22.2.*-*",
       "MaSoft.MaPos.Core >= 1.0.0",
       "MaSoft.MaPos.Models >= 1.0.0",
@@ -5926,6 +5927,10 @@
         "targetAlias": "net6.0-windows",
         "dependencies": {
           "DevExpress.Utils": {
+            "target": "Package",
+            "version": "[22.2.3, )"
+          },
+          "DevExpress.Win": {
             "target": "Package",
             "version": "[22.2.3, )"
           },

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors.TextEditController.Win32;
 using DevExpress.XtraSplashScreen;
 using MaSoft.MaPos.Windows.Helper;
+using MaSoft.MaPos.Windows.Properties;
 using Timer = System.Windows.Forms.Timer;
 
 namespace MaSoft.MaPos.Windows {
@@ -21,17 +22,23 @@ namespace MaSoft.MaPos.Windows {
 
         public bool Loaded = false;
 
+        public Image ConvertSvgToBitmap_FromResource(byte[] byteArray, int width, int height)
+        {
+            DevExpress.Utils.Svg.SvgImage svgImage = DevExpress.XtraEditors.Controls.SvgImageBinaryConverter.FromByteArray((byte[])byteArray);
+            DevExpress.Utils.Svg.SvgBitmap svgBitmap = new DevExpress.Utils.Svg.SvgBitmap(svgImage);
+            return svgBitmap.Render(new Size(width, height),
+                                        DevExpress.Utils.Svg.SvgPaletteHelper.GetSvgPalette(DevExpress.LookAndFeel.UserLookAndFeel.Default,
+                                        DevExpress.Utils.Drawing.ObjectState.Normal));
+        }
+
         public MaPosSplashForm(Action InitMethod) {
             InitializeComponent();
 
             labelControl1.Text = string.Format("{0} {1}", labelControl1.Text, GetYearString() );
 
-            pictureEdit1.Size = new Size(168, 48);
-            pictureEdit1.Image = global::MaSoft.MaPos.Windows.Properties.Resources.logo;
+            pictureEdit2.Size = new Size(435, 190);
+            pictureEdit2.Image = ConvertSvgToBitmap_FromResource(Resources.mapos_svg, 390, 75);
 
-            pictureEdit2.Size = new Size(434, 187);
-            pictureEdit2.Image = global::MaSoft.MaPos.Windows.Properties.Resources.SplashPicture;
-            
             tmr = new Timer();
             tmr.Interval = 200;
             tmr.Tick += new EventHandler(tmr_Tick);

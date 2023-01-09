@@ -28,9 +28,9 @@ namespace MaSoft.MaPos.Windows
         [STAThread]
         static void Main()
         {
-            CultureInfo cultureInfo = CultureInfo.GetCultureInfo("tr-TR");
-            Thread.CurrentThread.CurrentCulture = cultureInfo;
-            Thread.CurrentThread.CurrentUICulture = cultureInfo;
+            StaticVariables.cultureInfo = CultureInfo.GetCultureInfo("tr-TR");
+            Thread.CurrentThread.CurrentCulture = StaticVariables.cultureInfo;
+            Thread.CurrentThread.CurrentUICulture = StaticVariables.cultureInfo;
 
             // Custom MessageBoxes...
             MessageHelper.Initialize();
@@ -78,18 +78,28 @@ namespace MaSoft.MaPos.Windows
             }
             else 
             {
-                //MessageHelper.SuccessMsg("Veritabanı Bağlantısı", "Bağlantı Başarı ile sağlandı..");
+                // ...
+                // MessageHelper.SuccessMsg("Veritabanı Bağlantısı", "Bağlantı Başarı ile sağlandı..");
                 // İşleme devam...
             }
 
             MaPosSplashForm splashForm = new MaPosSplashForm(() => { LocalHelper.WarmUp(); });
             splashForm.ShowDialog();
 
-
             // Wxi Sharpness özellikle set ediliyor..           
             UserLookAndFeel.Default.SetSkinStyle(SkinSvgPalette.WXICompact.Sharpness);
 
-            Application.Run(new frmLogin());
+            frmLogin lgnForm = new frmLogin();
+            lgnForm.ShowDialog();
+
+            // Eğer User Authentication sağlanmamış ise !
+            if (!StaticVariables.UserAuthenticated)
+            {
+                Application.Exit();
+                return;
+            }
+
+            Application.Run(new MaPosMainForm());
         }
     }
 }

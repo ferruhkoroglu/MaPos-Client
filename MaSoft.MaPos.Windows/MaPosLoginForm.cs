@@ -27,15 +27,15 @@ namespace MaSoft.MaPos.Windows
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             WindowState = System.Windows.Forms.FormWindowState.Maximized;
 
-            GetDateTimeInfo();
-            Application.DoEvents();
-
             tmrDateTimeInfo = new Timer();
             tmrDateTimeInfo.Interval = 1000;
             tmrDateTimeInfo.Tick += new EventHandler(tmr_DateTimeInfo_Trick);
             tmrDateTimeInfo.Start();
 
             InitializeComponent();
+
+            LoadDateTimeInfo();
+            Application.DoEvents();
 
             LoadComputerAndUserName();
             CloseButtonTabStop();
@@ -112,7 +112,7 @@ namespace MaSoft.MaPos.Windows
             btnEnter.Click += new EventHandler(NumericButtonClick);
         }
 
-        void NumericButtonClick(object? sender, EventArgs e)
+        void NumericButtonClick(object sender, EventArgs e)
         {
             SimpleButton senderButton = (sender as SimpleButton);
             if (senderButton.Name == btnBackSpace.Name)
@@ -141,9 +141,15 @@ namespace MaSoft.MaPos.Windows
             return DateTime.Now.ToString() + " " + DateTime.Now.ToString("dddd");
         }
 
-        void tmr_DateTimeInfo_Trick(object sender, EventArgs e)
+
+        void LoadDateTimeInfo()
         {
             lblDateTimeInfo.Text = GetDateTimeInfo();
+        }
+
+        void tmr_DateTimeInfo_Trick(object sender, EventArgs e)
+        {
+            LoadDateTimeInfo();
             Application.DoEvents();
         }
 
@@ -171,9 +177,22 @@ namespace MaSoft.MaPos.Windows
         private bool Authentication(string Password)
         {
             // Authentication Kontrolü ??
+            if (AppHelper.UserAuthentication(Password))
+            {
+                //MessageHelper.SuccessMsg("MaPos Giriş Ekranı", "Programa giriş yapıldı...");
 
-            MessageHelper.SuccessMsg("MaPos Giriş Ekranı", "Programa giriş yapıldı...");
-            edtPassword.Text = "";
+                StaticVariables.UserAuthenticated = true;
+                StaticVariables.UserPassword = Password;
+
+                edtPassword.Text = "";
+                Close();
+            }
+            else
+            {
+                MessageHelper.ErrorMsg("MaPos Giriş Ekranı", "Şifre yanlış veya hatalı !!");
+                edtPassword.Text = "";
+            }
+
 
             return true;
         }
