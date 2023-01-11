@@ -8,10 +8,7 @@ using System.Net.NetworkInformation;
 using System.Security.Cryptography;
 using System.Text;
 using System.Diagnostics;
-using System.Threading;
 using System.Reflection;
-using System.Windows.Forms;
-using System.Data.SqlTypes;
 
 namespace MaSoft.MaPos.Core
 {
@@ -142,47 +139,6 @@ namespace MaSoft.MaPos.Core
 
             return processResult;
         }
-
-        public static void WaitInternetConnection(int Seconds)
-        {
-            int CurrTickCount = Environment.TickCount;
-
-            int MiliSeconds = (Seconds * 1000);
-            while (((Environment.TickCount - CurrTickCount) <= MiliSeconds) && (!InternetConnectionExist()))
-            {
-                Thread.Sleep(50);
-                Application.DoEvents();
-            }
-
-            Application.DoEvents();
-        }
-
-        public static void Wait(int Seconds)
-        {
-            int CurrTickCount = Environment.TickCount;
-
-            int MiliSeconds = (Seconds * 1000);
-            while ((Environment.TickCount - CurrTickCount) <= MiliSeconds)
-            {
-                Thread.Sleep(25);
-                Application.DoEvents();
-            }
-
-            Application.DoEvents();
-        }
-
-        public static void WaitMiliSecond(int MiliSeconds)
-        {
-            int CurrTickCount = Environment.TickCount;
-            while ((Environment.TickCount - CurrTickCount) <= MiliSeconds)
-            {
-                Thread.Sleep(25);
-                Application.DoEvents();
-            }
-
-            Application.DoEvents();
-        }
-
 
         public static void SaveSettings()
         {

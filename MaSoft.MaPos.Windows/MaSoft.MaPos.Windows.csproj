@@ -31,7 +31,6 @@
     <ProjectReference Include="..\MaSoft.MaPos.Core\MaSoft.MaPos.Core.csproj" />
     <ProjectReference Include="..\MaSoft.MaPos.Models\MaSoft.MaPos.Models.csproj" />
     <ProjectReference Include="..\MaSoft.MaPos.Resources\MaSoft.MaPos.Resources.csproj" />
-    <ProjectReference Include="..\MaSoft.MaPos.Windows.Library\MaSoft.MaPos.Windows.Library.csproj" />
   </ItemGroup>
 
   <ItemGroup>

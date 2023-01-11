@@ -52,5 +52,5 @@ namespace MaSoft.MaPos.Core
         {
             return "Data Source=" + HostIp + ";Initial Catalog=" + Db + ";User ID=" + UserName + ";Password=" + DbPassword;
         }
-}
+    }
 }

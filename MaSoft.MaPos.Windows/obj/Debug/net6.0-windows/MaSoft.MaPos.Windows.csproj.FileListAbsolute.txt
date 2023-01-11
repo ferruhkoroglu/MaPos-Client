@@ -95,10 +95,8 @@ E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-wind
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.ServiceProcess.ServiceController.dll
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-windows\MaSoft.MaPos.Models.dll
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-windows\MaSoft.MaPos.Resources.dll
-E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-windows\MaSoft.MaPos.Windows.Library.dll
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-windows\MaSoft.MaPos.Models.pdb
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-windows\MaSoft.MaPos.Resources.pdb
-E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-windows\MaSoft.MaPos.Windows.Library.pdb
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\obj\Debug\net6.0-windows\MaSoft.MaPos.Windows.csproj.AssemblyReference.cache
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\obj\Debug\net6.0-windows\MaSoft.MaPos.Windows.csproj.GenerateResource.cache
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\obj\Debug\net6.0-windows\MaSoft.MaPos.Windows.GeneratedMSBuildEditorConfig.editorconfig
@@ -119,3 +117,6 @@ E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-wind
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\obj\Debug\net6.0-windows\MaSoft.MaPos.Windows.frmLogin.resources
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\obj\Debug\net6.0-windows\MaSoft.MaPos.Windows.mainTileControl.resources
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\obj\Debug\net6.0-windows\MaSoft.MaPos.Windows.MaPosMainForm.resources
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-windows\appsettings.json
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll

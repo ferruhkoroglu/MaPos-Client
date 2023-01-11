@@ -1,11 +1,4 @@
-﻿using DevExpress.Data.Filtering;
-using DevExpress.LookAndFeel;
-using DevExpress.Skins;
-using DevExpress.Utils;
-using DevExpress.UserSkins;
-using DevExpress.XtraEditors;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -13,10 +6,16 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Configuration;
 
+using DevExpress.LookAndFeel;
+using DevExpress.Xpo;
+using DevExpress.Xpo.DB;
+
 using MaSoft.MaPos.Core;
-using MessageHelper = MaSoft.MaPos.Core.MessageHelper;
-using MaSoft.MaPos.Windows.Helper;
-using System.Drawing;
+using MaSoft.MaPos.Models;
+
+using MessageHelper = MaSoft.MaPos.Windows.MessageHelper;
+using MaSoft.MaPos.Models.MaPos;
+using System.ServiceModel.Channels;
 
 namespace MaSoft.MaPos.Windows
 {
@@ -98,6 +97,20 @@ namespace MaSoft.MaPos.Windows
                 Application.Exit();
                 return;
             }
+
+
+            // ORM Initialize...            
+            // DevExpress.Xpo.DB.IDataStore store = XPOHelper.GetConnectionProvider(AutoCreateOption.SchemaAlreadyExists);
+            XpoDefault.DataLayer = XPOHelper.GetDataLayer(AutoCreateOption.SchemaAlreadyExists);
+
+            // Unit Of Work...
+            XpoDefault.Session.AutoCreateOption = DevExpress.Xpo.DB.AutoCreateOption.None;
+            XpoDefault.Session = new UnitOfWork(XpoDefault.DataLayer);
+
+            // Test Load...
+            //var xpCollection = new XPCollection(typeof(Users));
+            //var userInfo = XpoDefault.Session.Query<Users>().Where(a => a.Password == StaticVariables.UserPassword).ToList().FirstOrDefault();
+            //MessageHelper.SuccessMsg("Hoşgeldiniz, Kullanıcı Adı:", userInfo.UserName);
 
             Application.Run(new MaPosMainForm());
         }

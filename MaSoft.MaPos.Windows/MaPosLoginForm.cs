@@ -1,17 +1,7 @@
-﻿using DevExpress.XtraScheduler.Drawing;
-using DevExpress.XtraSplashScreen;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.DirectoryServices.ActiveDirectory;
+﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using DevExpress.XtraEditors.TextEditController.Win32;
-using DevExpress.Printing.Core.PdfExport.Metafile;
 using MaSoft.MaPos.Core;
 using MaSoft.MaPos.Windows.Properties;
 

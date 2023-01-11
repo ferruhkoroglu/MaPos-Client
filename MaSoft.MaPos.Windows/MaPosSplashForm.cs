@@ -9,7 +9,6 @@ using System.Threading;
 using System.Windows.Forms;
 using DevExpress.XtraEditors.TextEditController.Win32;
 using DevExpress.XtraSplashScreen;
-using MaSoft.MaPos.Windows.Helper;
 using MaSoft.MaPos.Windows.Properties;
 using Timer = System.Windows.Forms.Timer;
 

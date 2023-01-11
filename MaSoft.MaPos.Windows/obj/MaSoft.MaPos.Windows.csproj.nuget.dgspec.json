@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -32,8 +32,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0-windows7.0": {
-            "targetAlias": "net6.0-windows",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -44,13 +44,9 @@
         }
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
-            "DevExpress.Win": {
-              "target": "Package",
-              "version": "[22.2.3, )"
-            },
             "System.Data.Common": {
               "target": "Package",
               "version": "[4.3.0, )"
@@ -74,9 +70,6 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App": {
-              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
@@ -113,7 +106,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Core\\MaSoft.MaPos.Core.csproj": {
+                "projectPath": "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Core\\MaSoft.MaPos.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -125,6 +122,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "DevExpress.Xpo": {
+              "target": "Package",
+              "version": "[22.2.3, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -207,75 +214,6 @@
         }
       }
     },
-    "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Windows.Library\\MaSoft.MaPos.Windows.Library.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Windows.Library\\MaSoft.MaPos.Windows.Library.csproj",
-        "projectName": "MaSoft.MaPos.Windows.Library",
-        "projectPath": "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Windows.Library\\MaSoft.MaPos.Windows.Library.csproj",
-        "packagesPath": "C:\\Users\\FK\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Windows.Library\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\FK\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages": {},
-          "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
-          "C:\\Users\\FK\\.nuget\\packages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Models\\MaSoft.MaPos.Models.csproj": {
-                "projectPath": "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Models\\MaSoft.MaPos.Models.csproj"
-              },
-              "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Resources\\MaSoft.MaPos.Resources.csproj": {
-                "projectPath": "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Resources\\MaSoft.MaPos.Resources.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Windows\\MaSoft.MaPos.Windows.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -315,9 +253,6 @@
               },
               "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Resources\\MaSoft.MaPos.Resources.csproj": {
                 "projectPath": "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Resources\\MaSoft.MaPos.Resources.csproj"
-              },
-              "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Windows.Library\\MaSoft.MaPos.Windows.Library.csproj": {
-                "projectPath": "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Windows.Library\\MaSoft.MaPos.Windows.Library.csproj"
               }
             }
           }

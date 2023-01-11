@@ -6,4 +6,72 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Banks.cs" />
+    <Compile Remove="Banks.Designer.cs" />
+    <Compile Remove="CashBoxes.cs" />
+    <Compile Remove="CashBoxes.Designer.cs" />
+    <Compile Remove="CashBoxInputs.cs" />
+    <Compile Remove="CashBoxInputs.Designer.cs" />
+    <Compile Remove="CashBoxOutputs.cs" />
+    <Compile Remove="CashBoxOutputs.Designer.cs" />
+    <Compile Remove="CashBoxSummaryInfo.cs" />
+    <Compile Remove="CashBoxSummaryInfo.Designer.cs" />
+    <Compile Remove="CollectionAccount.cs" />
+    <Compile Remove="CollectionAccount.Designer.cs" />
+    <Compile Remove="ConnectionHelper.cs" />
+    <Compile Remove="CustomerGroups.cs" />
+    <Compile Remove="CustomerGroups.Designer.cs" />
+    <Compile Remove="Customers.cs" />
+    <Compile Remove="Customers.Designer.cs" />
+    <Compile Remove="Departments.cs" />
+    <Compile Remove="Departments.Designer.cs" />
+    <Compile Remove="MillUnits.cs" />
+    <Compile Remove="MillUnits.Designer.cs" />
+    <Compile Remove="Personnal.cs" />
+    <Compile Remove="Personnal.Designer.cs" />
+    <Compile Remove="PersonnalTerminals.cs" />
+    <Compile Remove="PersonnalTerminals.Designer.cs" />
+    <Compile Remove="Portion.cs" />
+    <Compile Remove="Portion.Designer.cs" />
+    <Compile Remove="Printers.cs" />
+    <Compile Remove="Printers.Designer.cs" />
+    <Compile Remove="PrintTask.cs" />
+    <Compile Remove="PrintTask.Designer.cs" />
+    <Compile Remove="ProductGroup.cs" />
+    <Compile Remove="ProductGroup.Designer.cs" />
+    <Compile Remove="ProductPrices.cs" />
+    <Compile Remove="ProductPrices.Designer.cs" />
+    <Compile Remove="Products.cs" />
+    <Compile Remove="Products.Designer.cs" />
+    <Compile Remove="ProgramSettings.cs" />
+    <Compile Remove="ProgramSettings.Designer.cs" />
+    <Compile Remove="TableGroups.cs" />
+    <Compile Remove="TableGroups.Designer.cs" />
+    <Compile Remove="Tables.cs" />
+    <Compile Remove="Tables.Designer.cs" />
+    <Compile Remove="Terminals.cs" />
+    <Compile Remove="Terminals.Designer.cs" />
+    <Compile Remove="Users.cs" />
+    <Compile Remove="Users.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Xpo" Version="22.2.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MaSoft.MaPos.Core\MaSoft.MaPos.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ORMModel.xpo.diagram">
+      <AutoGen>True</AutoGen>
+    </None>
+  </ItemGroup>
+
 </Project>

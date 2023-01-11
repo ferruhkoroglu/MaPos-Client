@@ -9,13 +9,16 @@ using DevExpress.XtraPivotGrid;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraRichEdit;
 using DevExpress.XtraSpreadsheet;
+using MaSoft.MaPos.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace MaSoft.MaPos.Windows.Helper
+namespace MaSoft.MaPos.Windows
 {
     public static class LocalHelper
     {
@@ -42,6 +45,48 @@ namespace MaSoft.MaPos.Windows.Helper
             WindowsFormsSettings.TouchUIMode = DevExpress.LookAndFeel.TouchUIMode.True;
             WindowsFormsSettings.ApplyDemoSettings();
         }
+
+        public static void WaitInternetConnection(int Seconds)
+        {
+            int CurrTickCount = Environment.TickCount;
+
+            int MiliSeconds = (Seconds * 1000);
+            while (((Environment.TickCount - CurrTickCount) <= MiliSeconds) && (!AppHelper.InternetConnectionExist()))
+            {
+                Thread.Sleep(50);
+                Application.DoEvents();
+            }
+
+            Application.DoEvents();
+        }
+
+        public static void Wait(int Seconds)
+        {
+            int CurrTickCount = Environment.TickCount;
+
+            int MiliSeconds = (Seconds * 1000);
+            while ((Environment.TickCount - CurrTickCount) <= MiliSeconds)
+            {
+                Thread.Sleep(25);
+                Application.DoEvents();
+            }
+
+            Application.DoEvents();
+        }
+
+        public static void WaitMiliSecond(int MiliSeconds)
+        {
+            int CurrTickCount = Environment.TickCount;
+            while ((Environment.TickCount - CurrTickCount) <= MiliSeconds)
+            {
+                Thread.Sleep(25);
+                Application.DoEvents();
+            }
+
+            Application.DoEvents();
+        }
+
+
     }
 
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "St2Uq8lj+F6WZ/7sKfbq2Spnd0HgJ3baaeHRzv3yN5AKmhbWAhk4LY63SMU78tDwlfnCih5gOgEyLMUhyHuOfg==",
+  "dgSpecHash": "uDDKM3cX0oZlKCAgQBFION8eqrME29q8pIx6P6JC+6X12H+zG9V24WG5YGutvR8DEwb2BzPvHoNJFip+SngE8Q==",
   "success": true,
   "projectFilePath": "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Windows\\MaSoft.MaPos.Windows.csproj",
   "expectedPackageFiles": [
@@ -60,8 +60,10 @@
     "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages\\devexpress.win.treemap\\22.2.3\\devexpress.win.treemap.22.2.3.nupkg.sha512",
     "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages\\devexpress.win.verticalgrid\\22.2.3\\devexpress.win.verticalgrid.22.2.3.nupkg.sha512",
     "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages\\devexpress.xpo\\22.2.3\\devexpress.xpo.22.2.3.nupkg.sha512",
+    "C:\\Users\\FK\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\FK\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\2.0.0\\microsoft.extensions.dependencyinjection.2.0.0.nupkg.sha512",
     "C:\\Users\\FK\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.0.0\\microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\FK\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\FK\\.nuget\\packages\\microsoft.netcore.platforms\\3.0.0\\microsoft.netcore.platforms.3.0.0.nupkg.sha512",
     "C:\\Users\\FK\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\FK\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
@@ -96,7 +98,7 @@
     "C:\\Users\\FK\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\FK\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
     "C:\\Users\\FK\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
-    "C:\\Users\\FK\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
+    "C:\\Users\\FK\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\FK\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\FK\\.nuget\\packages\\system.runtime.loader\\4.3.0\\system.runtime.loader.4.3.0.nupkg.sha512",
     "C:\\Users\\FK\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
