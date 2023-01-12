@@ -1,5 +1,7 @@
 ﻿using DevExpress.Images;
 using DevExpress.Utils;
+using DevExpress.Utils.Animation;
+using DevExpress.Utils.Svg;
 using DevExpress.XtraCharts;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGauges.Win;
@@ -12,6 +14,8 @@ using DevExpress.XtraSpreadsheet;
 using MaSoft.MaPos.Core;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -86,7 +90,38 @@ namespace MaSoft.MaPos.Windows
             Application.DoEvents();
         }
 
+        public static Image ConvertSvgToBitmap_FromResource(byte[] byteArray, int width, int height)
+        {
+            DevExpress.Utils.Svg.SvgImage svgImage = DevExpress.XtraEditors.Controls.SvgImageBinaryConverter.FromByteArray((byte[])byteArray);
+            DevExpress.Utils.Svg.SvgBitmap svgBitmap = new DevExpress.Utils.Svg.SvgBitmap(svgImage);
+            return svgBitmap.Render(new Size(width, height),
+                                        DevExpress.Utils.Svg.SvgPaletteHelper.GetSvgPalette(DevExpress.LookAndFeel.UserLookAndFeel.Default,
+                                        DevExpress.Utils.Drawing.ObjectState.Normal));
+        }
 
+        public static SvgImage SvgFromByteArray(byte[] resource)
+        {
+            using (MemoryStream stream = new MemoryStream(resource))
+            {
+                return SvgImage.FromStream(stream);
+            }
+        }
+    }
+
+    public class BatchTransition: IDisposable
+    {
+        private TransitionManager manager;
+        public BatchTransition(TransitionManager manager, Control control)
+        {
+            this.manager = manager;
+            manager.StartTransition(control);
+        }
+
+        public void Dispose()
+        {
+            manager.EndTransition();
+            manager = null;
+        }
     }
 
 }

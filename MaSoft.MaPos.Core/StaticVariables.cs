@@ -37,12 +37,6 @@ namespace MaSoft.MaPos.Core
         public static bool ClickSubPageActive = false;
         public static string RequestSite = "";
 
-        public static string HtmlMessageFileName = "ContactUsReply.html";
-
-        public static bool AttackMode = false;
-        public static string AttackSite = "***";
-
-
         public static bool   UserAuthenticated = false;
         public static string UserPassword = "";
 

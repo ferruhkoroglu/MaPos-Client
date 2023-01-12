@@ -88,6 +88,7 @@ namespace MaSoft.MaPos.Windows
             // Wxi Sharpness özellikle set ediliyor..           
             UserLookAndFeel.Default.SetSkinStyle(SkinSvgPalette.WXICompact.Sharpness);
 
+            
             frmLogin lgnForm = new frmLogin();
             lgnForm.ShowDialog();
 
@@ -97,7 +98,7 @@ namespace MaSoft.MaPos.Windows
                 Application.Exit();
                 return;
             }
-
+            
 
             // ORM Initialize...            
             // DevExpress.Xpo.DB.IDataStore store = XPOHelper.GetConnectionProvider(AutoCreateOption.SchemaAlreadyExists);
@@ -107,10 +108,13 @@ namespace MaSoft.MaPos.Windows
             XpoDefault.Session.AutoCreateOption = DevExpress.Xpo.DB.AutoCreateOption.None;
             XpoDefault.Session = new UnitOfWork(XpoDefault.DataLayer);
 
-            // Test Load...
+            // Test Load...            
             //var xpCollection = new XPCollection(typeof(Users));
             //var userInfo = XpoDefault.Session.Query<Users>().Where(a => a.Password == StaticVariables.UserPassword).ToList().FirstOrDefault();
             //MessageHelper.SuccessMsg("Hoşgeldiniz, Kullanıcı Adı:", userInfo.UserName);
+
+            //var xpCollection = new XPCollection(typeof(Tables));
+            //var tblInfo = XpoDefault.Session.Query<Tables>().ToList();
 
             Application.Run(new MaPosMainForm());
         }

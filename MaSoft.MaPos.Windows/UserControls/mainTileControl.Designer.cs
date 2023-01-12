@@ -53,10 +53,7 @@
             this.itemCollection = new DevExpress.XtraEditors.TileItem();
             this.itemPayment = new DevExpress.XtraEditors.TileItem();
             this.itemBreak = new DevExpress.XtraEditors.TileItem();
-            this.tileGroup5 = new DevExpress.XtraEditors.TileGroup();
             this.tileItem1 = new DevExpress.XtraEditors.TileItem();
-            this.btnMin = new DevExpress.XtraEditors.SimpleButton();
-            this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.tileItem2 = new DevExpress.XtraEditors.TileItem();
             this.tileItem3 = new DevExpress.XtraEditors.TileItem();
             this.SuspendLayout();
@@ -78,21 +75,18 @@
             this.tileControl1.Groups.Add(this.tileGroup2);
             this.tileControl1.Groups.Add(this.tileGroup3);
             this.tileControl1.Groups.Add(this.tileGroup4);
-            this.tileControl1.Groups.Add(this.tileGroup5);
             this.tileControl1.ItemBorderVisibility = DevExpress.XtraEditors.TileItemBorderVisibility.Never;
             this.tileControl1.ItemContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
             this.tileControl1.ItemPadding = new System.Windows.Forms.Padding(10, 8, 12, 8);
             this.tileControl1.ItemSize = 135;
             this.tileControl1.ItemTextShowMode = DevExpress.XtraEditors.TileItemContentShowMode.Hover;
             this.tileControl1.Location = new System.Drawing.Point(2, 2);
-            this.tileControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tileControl1.MaxId = 68;
             this.tileControl1.Name = "tileControl1";
-            this.tileControl1.Padding = new System.Windows.Forms.Padding(21);
             this.tileControl1.RowCount = 4;
             this.tileControl1.ShowGroupText = true;
             this.tileControl1.ShowText = true;
-            this.tileControl1.Size = new System.Drawing.Size(1331, 837);
+            this.tileControl1.Size = new System.Drawing.Size(1140, 725);
             this.tileControl1.TabIndex = 0;
             this.tileControl1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OnTileControlKeyUp);
             // 
@@ -124,6 +118,7 @@
             this.itemTableOrder.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.itemTableOrder.Name = "itemTableOrder";
             this.itemTableOrder.TextShowMode = DevExpress.XtraEditors.TileItemContentShowMode.Always;
+            this.itemTableOrder.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.itemTableOrder_ItemClick);
             // 
             // itemPackageOrder
             // 
@@ -222,14 +217,14 @@
             // 
             // itemManagementPanel
             // 
-            this.itemManagementPanel.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(61)))), ((int)(((byte)(186)))));
+            this.itemManagementPanel.AppearanceItem.Normal.BackColor = System.Drawing.Color.Gray;
             this.itemManagementPanel.AppearanceItem.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.itemManagementPanel.AppearanceItem.Normal.Options.UseBackColor = true;
             this.itemManagementPanel.AppearanceItem.Normal.Options.UseFont = true;
-            tileItemElement6.ImageOptions.Image = global::MaSoft.MaPos.Windows.Properties.Resources.Sports;
             tileItemElement6.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight;
-            tileItemElement6.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
             tileItemElement6.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
+            tileItemElement6.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage")));
+            tileItemElement6.ImageOptions.SvgImageSize = new System.Drawing.Size(50, 50);
             tileItemElement6.Text = "Yönetim Paneli";
             tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
             this.itemManagementPanel.Elements.Add(tileItemElement6);
@@ -315,10 +310,6 @@
             this.itemBreak.Name = "itemBreak";
             this.itemBreak.TextShowMode = DevExpress.XtraEditors.TileItemContentShowMode.Always;
             // 
-            // tileGroup5
-            // 
-            this.tileGroup5.Name = "tileGroup5";
-            // 
             // tileItem1
             // 
             tileItemElement11.Text = "tileItem1";
@@ -326,32 +317,6 @@
             this.tileItem1.Id = 60;
             this.tileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem1.Name = "tileItem1";
-            // 
-            // btnMin
-            // 
-            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMin.AppearanceHovered.BackColor = System.Drawing.Color.White;
-            this.btnMin.AppearanceHovered.Options.UseBackColor = true;
-            this.btnMin.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnMin.ImageOptions.SvgImage")));
-            this.btnMin.Location = new System.Drawing.Point(1225, 0);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
-            this.btnMin.Size = new System.Drawing.Size(47, 41);
-            this.btnMin.TabIndex = 4;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnClose.Appearance.Options.UseFont = true;
-            this.btnClose.AppearanceHovered.BackColor = System.Drawing.Color.White;
-            this.btnClose.AppearanceHovered.Options.UseBackColor = true;
-            this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
-            this.btnClose.Location = new System.Drawing.Point(1288, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.True;
-            this.btnClose.Size = new System.Drawing.Size(42, 41);
-            this.btnClose.TabIndex = 3;
             // 
             // tileItem2
             // 
@@ -371,16 +336,12 @@
             // 
             // mainTileControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.Controls.Add(this.btnMin);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tileControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "mainTileControl";
             this.Padding = new System.Windows.Forms.Padding(2);
-            this.Size = new System.Drawing.Size(1335, 841);
+            this.Size = new System.Drawing.Size(1144, 729);
             this.ResumeLayout(false);
 
         }
@@ -403,10 +364,7 @@
         private DevExpress.XtraEditors.TileGroup tileGroup4;
         private DevExpress.XtraEditors.TileItem itemCollection;
         private DevExpress.XtraEditors.TileItem tileItem1;
-        private DevExpress.XtraEditors.SimpleButton btnClose;
-        private DevExpress.XtraEditors.SimpleButton btnMin;
         private DevExpress.XtraEditors.TileItem tileItem2;
         private DevExpress.XtraEditors.TileItem tileItem3;
-        private DevExpress.XtraEditors.TileGroup tileGroup5;
     }
 }

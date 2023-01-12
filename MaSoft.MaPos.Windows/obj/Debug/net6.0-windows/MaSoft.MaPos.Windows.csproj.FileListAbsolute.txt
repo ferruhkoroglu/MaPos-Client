@@ -120,3 +120,4 @@ E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\obj\Debug\net6.0-wind
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-windows\appsettings.json
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\obj\Debug\net6.0-windows\MaSoft.MaPos.Windows.mainTableControl.resources

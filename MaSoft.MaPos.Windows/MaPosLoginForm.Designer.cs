@@ -48,12 +48,15 @@
             this.lblDateTimeInfo = new DevExpress.XtraEditors.LabelControl();
             this.lblComputerName = new DevExpress.XtraEditors.LabelControl();
             this.lblUserName = new DevExpress.XtraEditors.LabelControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pboxLogo = new System.Windows.Forms.PictureBox();
+            this.tileNavPane1 = new DevExpress.XtraBars.Navigation.TileNavPane();
+            this.nbtnInfo = new DevExpress.XtraBars.Navigation.NavButton();
+            this.nbtnMin = new DevExpress.XtraBars.Navigation.NavButton();
+            this.nbtnClose = new DevExpress.XtraBars.Navigation.NavButton();
             ((System.ComponentModel.ISupportInitialize)(this.edtPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tileNavPane1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn1
@@ -266,16 +269,6 @@
             this.lblUserName.Size = new System.Drawing.Size(0, 19);
             this.lblUserName.TabIndex = 19;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MaSoft.MaPos.Windows.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(312, 104);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
             // pboxLogo
             // 
             this.pboxLogo.Location = new System.Drawing.Point(200, 182);
@@ -284,14 +277,54 @@
             this.pboxLogo.TabIndex = 20;
             this.pboxLogo.TabStop = false;
             // 
+            // tileNavPane1
+            // 
+            this.tileNavPane1.Buttons.Add(this.nbtnInfo);
+            this.tileNavPane1.Buttons.Add(this.nbtnMin);
+            this.tileNavPane1.Buttons.Add(this.nbtnClose);
+            // 
+            // tileNavCategory1
+            // 
+            this.tileNavPane1.DefaultCategory.Name = "tileNavCategory1";
+            // 
+            // 
+            // 
+            this.tileNavPane1.DefaultCategory.Tile.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            this.tileNavPane1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tileNavPane1.Location = new System.Drawing.Point(0, 0);
+            this.tileNavPane1.Name = "tileNavPane1";
+            this.tileNavPane1.Size = new System.Drawing.Size(1071, 40);
+            this.tileNavPane1.TabIndex = 21;
+            this.tileNavPane1.Text = "tileNavPane1";
+            // 
+            // nbtnInfo
+            // 
+            this.nbtnInfo.Alignment = DevExpress.XtraBars.Navigation.NavButtonAlignment.Left;
+            this.nbtnInfo.Caption = null;
+            this.nbtnInfo.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.nbtnInfo.ImageOptions.SvgImageSize = new System.Drawing.Size(125, 30);
+            this.nbtnInfo.Name = "nbtnInfo";
+            // 
+            // nbtnMin
+            // 
+            this.nbtnMin.Alignment = DevExpress.XtraBars.Navigation.NavButtonAlignment.Right;
+            this.nbtnMin.Caption = null;
+            this.nbtnMin.Name = "nbtnMin";
+            // 
+            // nbtnClose
+            // 
+            this.nbtnClose.Alignment = DevExpress.XtraBars.Navigation.NavButtonAlignment.Right;
+            this.nbtnClose.Caption = null;
+            this.nbtnClose.Name = "nbtnClose";
+            // 
             // frmLogin
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1071, 864);
+            this.Controls.Add(this.tileNavPane1);
             this.Controls.Add(this.pboxLogo);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.lblComputerName);
             this.Controls.Add(this.lblDateTimeInfo);
@@ -318,8 +351,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.edtPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tileNavPane1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,8 +378,11 @@
         private DevExpress.XtraEditors.LabelControl lblDateTimeInfo;
         private DevExpress.XtraEditors.LabelControl lblComputerName;
         private DevExpress.XtraEditors.LabelControl lblUserName;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pboxLogo;
+        private DevExpress.XtraBars.Navigation.TileNavPane tileNavPane1;
+        private DevExpress.XtraBars.Navigation.NavButton nbtnInfo;
+        private DevExpress.XtraBars.Navigation.NavButton nbtnMin;
+        private DevExpress.XtraBars.Navigation.NavButton nbtnClose;
     }
 }
 

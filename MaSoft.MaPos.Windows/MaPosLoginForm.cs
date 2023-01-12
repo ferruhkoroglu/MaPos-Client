@@ -1,7 +1,11 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using DevExpress.Utils.Svg;
 using DevExpress.XtraEditors;
+using DevExpress.XtraReports.Serialization;
+using DevExpress.XtraWaitForm;
 using MaSoft.MaPos.Core;
 using MaSoft.MaPos.Windows.Properties;
 
@@ -47,6 +51,39 @@ namespace MaSoft.MaPos.Windows
             pboxLogo.Size = new Size(640, 640);
             pboxLogo.Location = new Point((Width / 2) - 100,182);
 
+            //pboxCompanyLogo.Image = LocalHelper.ConvertSvgToBitmap_FromResource(Resources.mapos_svg, 307, 104);
+
+            //pboxCompanyLogo.SvgImage = SvgImage.FromResources("mapos_svg", System.Reflection.Assembly.GetExecutingAssembly());
+            //sSystem.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
+            //pboxCompanyLogo.SizeMode = SvgImageSizeMode.Stretch;
+
+            //pboxCompanyLogo.SvgImage = LocalHelper.SvgFromByteArray(Properties.Resources.mapos_white_logo);
+
+            nbtnInfo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(Resources.mapos_white_logo));
+            nbtnInfo.ImageOptions.SvgImageSize = new Size(125, 33);
+            nbtnInfo.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+
+            nbtnMin.ElementClick += new DevExpress.XtraBars.Navigation.NavElementClickEventHandler((sender, e) => { ((Form)this.Parent).WindowState = FormWindowState.Minimized; });
+            nbtnClose.ElementClick += new DevExpress.XtraBars.Navigation.NavElementClickEventHandler((sender, e) => { CloseApp(); });
+
+            //itemTableOrder.ItemClick += new TileItemClickEventHandler((sender, e) => { ((Form)this.Parent.Controls.Add(ucTableOrder); });
+
+            // Min..
+            nbtnMin.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(Resources.minimize_svg));
+            nbtnMin.ImageOptions.SvgImageSize = new Size(31, 31);
+            nbtnMin.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+
+            // Close..
+            nbtnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(Resources.close_svg));
+            nbtnClose.ImageOptions.SvgImageSize = new Size(28, 28);
+            nbtnClose.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+        }
+
+        void CloseApp()
+        {
+            DialogResult QuestionResult = MessageHelper.QuestionMsg("MaPos Adisyon", "Programı kapatmak istediğinize emin misiniz ?");
+            if (QuestionResult == DialogResult.Yes)
+                Application.Exit();
         }
 
         void LoadComputerAndUserName()
@@ -54,7 +91,6 @@ namespace MaSoft.MaPos.Windows
             lblComputerName.Text = "Bilgisayar Adı: " + System.Environment.MachineName;
             lblUserName.Text = "Kullanıcı: " + System.Environment.UserName;
         }
-
 
         void CloseButtonTabStop()
         {
@@ -64,7 +100,6 @@ namespace MaSoft.MaPos.Windows
                     (item as SimpleButton).TabStop = false;
             }
         }
-
 
         void InitButton()
         {
@@ -186,5 +221,7 @@ namespace MaSoft.MaPos.Windows
 
             return true;
         }
+
+
     }
 }

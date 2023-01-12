@@ -188,20 +188,6 @@ namespace MaSoft.MaPos.Core
                     //
                 }
 
-                // Attack Mode = defualt false... 
-                try
-                {
-                    if (iniFile.KeyExists("AttackMode"))
-                    {
-                        StaticVariables.AttackMode = Convert.ToBoolean(iniFile.Read("AttackMode"));
-                        StaticVariables.AttackSite = Convert.ToString(iniFile.Read("AttackSite"));
-                    }
-                }
-                catch
-                {
-                    //
-                }
-
             }
             finally
             {

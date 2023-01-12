@@ -21,22 +21,13 @@ namespace MaSoft.MaPos.Windows {
 
         public bool Loaded = false;
 
-        public Image ConvertSvgToBitmap_FromResource(byte[] byteArray, int width, int height)
-        {
-            DevExpress.Utils.Svg.SvgImage svgImage = DevExpress.XtraEditors.Controls.SvgImageBinaryConverter.FromByteArray((byte[])byteArray);
-            DevExpress.Utils.Svg.SvgBitmap svgBitmap = new DevExpress.Utils.Svg.SvgBitmap(svgImage);
-            return svgBitmap.Render(new Size(width, height),
-                                        DevExpress.Utils.Svg.SvgPaletteHelper.GetSvgPalette(DevExpress.LookAndFeel.UserLookAndFeel.Default,
-                                        DevExpress.Utils.Drawing.ObjectState.Normal));
-        }
-
         public MaPosSplashForm(Action InitMethod) {
             InitializeComponent();
 
             labelControl1.Text = string.Format("{0} {1}", labelControl1.Text, GetYearString() );
 
             pictureEdit2.Size = new Size(435, 190);
-            pictureEdit2.Image = ConvertSvgToBitmap_FromResource(Resources.mapos_svg, 390, 75);
+            pictureEdit2.Image = LocalHelper.ConvertSvgToBitmap_FromResource(Resources.mapos_svg, 390, 75);
 
             tmr = new Timer();
             tmr.Interval = 200;
@@ -44,7 +35,7 @@ namespace MaSoft.MaPos.Windows {
             tmr.Start();
 
             tmrClose = new Timer();
-            tmrClose.Interval = 3500;
+            tmrClose.Interval = 2000;
             tmrClose.Tick += new EventHandler(tmr_Close_Tick);
             tmrClose.Start();
 

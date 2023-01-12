@@ -13,11 +13,10 @@ using MaSoft.MaPos.Core;
 using MaSoft.MaPos.Windows.Properties;
 
 namespace MaSoft.MaPos.Windows {
-    public partial class mainTileControl: XtraUserControl {
-        public mainTileControl() {
+    public partial class mainTableControl: XtraUserControl {
+        public mainTableControl() {
             InitializeComponent();
         }
-
         protected override void OnLoad(EventArgs e) {
             base.OnLoad(e);
 
@@ -27,10 +26,11 @@ namespace MaSoft.MaPos.Windows {
 
         public void InitEvents()
         {
+            //
         }
 
         void SetBackground() {
-            tileControl1.BackgroundImage = TileControlBackgroundImage;
+            BackgroundImage = TileControlBackgroundImage;
         }
         void OnTileControlKeyUp(object sender, KeyEventArgs e) {
             if(e.KeyData == Keys.Escape)
@@ -62,11 +62,6 @@ namespace MaSoft.MaPos.Windows {
 
         private void itemDesktop_ItemClick(object sender, TileItemEventArgs e) {
             OnDesktopClick.Invoke(this, new EventArgs());
-        }
-
-        private void itemTableOrder_ItemClick(object sender, TileItemEventArgs e)
-        {
-            //this.Parent.Controls.Add();
         }
     }
 }
