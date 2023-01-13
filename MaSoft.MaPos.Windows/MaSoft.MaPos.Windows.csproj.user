@@ -11,7 +11,13 @@
     <Compile Update="MaPosSplashForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UserControls\mainTableControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControls\mainTileControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\MaPosUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

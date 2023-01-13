@@ -11,57 +11,41 @@ using DevExpress.XtraEditors;
 
 using MaSoft.MaPos.Core;
 using MaSoft.MaPos.Windows.Properties;
+using DevExpress.XtraBars.Navigation;
+
 
 namespace MaSoft.MaPos.Windows {
-    public partial class mainTableControl: XtraUserControl {
+    public partial class mainTableControl: MaPosUserControl
+    {
         public mainTableControl() {
             InitializeComponent();
         }
         protected override void OnLoad(EventArgs e) {
             base.OnLoad(e);
 
-            SetBackground();
+            //SetBackground();
             InitEvents();
+
+            tileNavPane1.LookAndFeel.UseDefaultLookAndFeel = false;
+            tileNavPane1.LookAndFeel.SkinName = "Basic";
+
+            //tileControl1.StartItemDragging += TileItemDragEventHandler;
+        }
+
+        public void TileItemDragEventHandler(object sender, TileItemDragEventArgs e)
+        {
+            e.Cancel = true;
         }
 
         public void InitEvents()
         {
-            //
+            // Runtime Customization kapatılıyor...
+            //lytcntrlMain.AllowCustomization = false;
         }
 
-        void SetBackground() {
-            BackgroundImage = TileControlBackgroundImage;
-        }
-        void OnTileControlKeyUp(object sender, KeyEventArgs e) {
-            if(e.KeyData == Keys.Escape)
-                Application.Exit();
-        }
-        Image tileControlBackground = null;
-        Image TileControlBackgroundImage {
-            get {
-                if(tileControlBackground == null)
-                    tileControlBackground = CreateBackgroundImage();
-                return tileControlBackground;
-            }
-        }
-        Image CreateBackgroundImage() {
-            Rectangle screenBounds = Screen.FromControl(this).Bounds;
-            Image bottomImg = GetBottomImage();
-            Bitmap img = new Bitmap(screenBounds.Width, screenBounds.Height);
-            using(Graphics graphics = Graphics.FromImage(img)) {
-                using(SolidBrush br = new SolidBrush(Color.FromArgb(36, 0, 64))) {
-                    graphics.FillRectangle(br, new Rectangle(Point.Empty, img.Size));
-                }
-                graphics.DrawImage(bottomImg, 0, screenBounds.Bottom - bottomImg.Height);
-            }
-            return img;
-        }
-        Image GetBottomImage() { return MaSoft.MaPos.Windows.Properties.Resources.Background; }
-
-        public event EventHandler OnDesktopClick;
-
-        private void itemDesktop_ItemClick(object sender, TileItemEventArgs e) {
-            OnDesktopClick.Invoke(this, new EventArgs());
+        private void btnMainPage_ElementClick(object sender, DevExpress.XtraBars.Navigation.NavElementEventArgs e)
+        {
+            ShowMainMenu();
         }
     }
 }

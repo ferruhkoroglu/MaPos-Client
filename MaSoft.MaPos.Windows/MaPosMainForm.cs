@@ -1,63 +1,86 @@
-﻿using DevExpress.XtraCharts.Designer.Native;
-using DevExpress.XtraEditors;
-using DevExpress.XtraLayout;
-using MaSoft.MaPos.Windows.Properties;
+﻿using DevExpress.XtraBars.Navigation;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaSoft.MaPos.Windows.Properties;
+using System.Xml;
 
 namespace MaSoft.MaPos.Windows
 {
     public partial class MaPosMainForm : DevExpress.XtraEditors.XtraForm
     {
-        mainTileControl tblControl;
-        
-        PanelControl pnlMain;
-        mainTableControl tblControl2;
+        mainTileControl ucMain;
+
+        NavigationFrame pnlMain;
+        mainTableControl ucTable;
+
+        NavigationPage pageMain;
+        NavigationPage pageTable;
 
         public MaPosMainForm()
         {
             InitializeComponent();
 
             CreatePanels();
-            InitObjects();
+            InitMainObjects();
         }
 
         void CreatePanels()
         {
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
 
-            //pnlMain = new SidePanel();
-            pnlMain = new PanelControl();
-            pnlMain.Dock = DockStyle.Fill;
-            pnlMain.Location = new System.Drawing.Point(0, 0);
+            pnlMain = new NavigationFrame();
+            pnlMain.Dock = DockStyle.Bottom;
+            pnlMain.Anchor = (AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom);
+            pnlMain.Location = new System.Drawing.Point(0, 40);
             pnlMain.Name = "pnlMain";
             pnlMain.Size = new System.Drawing.Size(956, 553);
             pnlMain.TabIndex = 0;
             pnlMain.Text = "";
             Controls.Add(pnlMain);
 
-            tblControl = new mainTileControl();
-            tblControl.Dock = DockStyle.Fill;
-            tblControl.Name = "mainTileControl";
-            tblControl.Visible = true;
-            pnlMain.Controls.Add(tblControl);
+            pnlMain.TransitionAnimationProperties.FrameCount = 100;
+            pnlMain.TransitionAnimationProperties.FrameInterval = 1000;
+            pnlMain.TransitionType = DevExpress.Utils.Animation.Transitions.PushFade;
 
-            tblControl2 = new mainTableControl();
-            tblControl2.Dock = DockStyle.Fill;
-            tblControl2.Name = "mainTableControl";
-            tblControl2.Visible = false;
-            pnlMain.Controls.Add(tblControl2);
+            pageMain = new NavigationPage();
+            pnlMain.Pages.Add(pageMain);
+
+            ucMain = new mainTileControl();
+            ucMain.Dock = DockStyle.Fill;
+            ucMain.Name = "mainTileControl";
+            ucMain.Visible = true;
+            pageMain.Controls.Add(ucMain);
+
+            pageTable = new NavigationPage();
+            pnlMain.Pages.Add(pageTable);
+
+            ucTable = new mainTableControl();
+            ucTable.Dock = DockStyle.Fill;
+            ucTable.Name = "mainTableControl";
+            ucTable.Visible = true;
+            pageTable.Controls.Add(ucTable);
+
+            pnlMain.SelectedPage = pageMain;
+
+            /*
+            tnavbarMain.AllowGlyphSkinning = true;
+            tnavbarMain.LookAndFeel.UseDefaultLookAndFeel = false;
+            tnavbarMain.LookAndFeel.SkinName = "Basic";
+            */
         }
 
-        void InitObjects()
+        public void ShowMainMenu()
+        {
+            pnlMain.SelectedPage = pageMain;
+        }
+        public void ShowTableOrder()
+        {
+            pnlMain.SelectedPage = pageTable;
+        }
+
+        void InitMainObjects()
         {
             nbtnInfo.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(Resources.mapos_white_logo));
             nbtnInfo.ImageOptions.SvgImageSize = new Size(125, 33);
@@ -89,20 +112,12 @@ namespace MaSoft.MaPos.Windows
 
         private void navButton2_ElementClick(object sender, DevExpress.XtraBars.Navigation.NavElementEventArgs e)
         {
-            using (BatchTransition TempBatchTransition = new BatchTransition(transitionManager1, pnlMain))
-            {
-                tblControl2.Visible = true;
-                tblControl.Visible = false;
-            }
+            pnlMain.SelectedPage = pageTable;
         }
 
         private void navButton3_ElementClick(object sender, DevExpress.XtraBars.Navigation.NavElementEventArgs e)
         {
-            using (BatchTransition TempBatchTransition = new BatchTransition(transitionManager1, pnlMain))
-            {
-                tblControl.Visible = true;
-                tblControl2.Visible = false;
-            }
+            pnlMain.SelectedPage = pageMain;
         }
     }
 }

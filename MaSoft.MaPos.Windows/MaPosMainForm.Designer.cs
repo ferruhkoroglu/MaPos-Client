@@ -36,8 +36,6 @@
             this.nbtnInfo = new DevExpress.XtraBars.Navigation.NavButton();
             this.nbtnMin = new DevExpress.XtraBars.Navigation.NavButton();
             this.nbtnClose = new DevExpress.XtraBars.Navigation.NavButton();
-            this.navButton2 = new DevExpress.XtraBars.Navigation.NavButton();
-            this.navButton3 = new DevExpress.XtraBars.Navigation.NavButton();
             this.transitionManager1 = new DevExpress.Utils.Animation.TransitionManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.lcntrlMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -67,8 +65,6 @@
             this.tnavbarMain.Buttons.Add(this.nbtnInfo);
             this.tnavbarMain.Buttons.Add(this.nbtnMin);
             this.tnavbarMain.Buttons.Add(this.nbtnClose);
-            this.tnavbarMain.Buttons.Add(this.navButton2);
-            this.tnavbarMain.Buttons.Add(this.navButton3);
             // 
             // tileNavCategory1
             // 
@@ -104,20 +100,6 @@
             this.nbtnClose.Caption = null;
             this.nbtnClose.Name = "nbtnClose";
             // 
-            // navButton2
-            // 
-            this.navButton2.Alignment = DevExpress.XtraBars.Navigation.NavButtonAlignment.Right;
-            this.navButton2.Caption = "navButton2";
-            this.navButton2.Name = "navButton2";
-            this.navButton2.ElementClick += new DevExpress.XtraBars.Navigation.NavElementClickEventHandler(this.navButton2_ElementClick);
-            // 
-            // navButton3
-            // 
-            this.navButton3.Alignment = DevExpress.XtraBars.Navigation.NavButtonAlignment.Right;
-            this.navButton3.Caption = "navButton3";
-            this.navButton3.Name = "navButton3";
-            this.navButton3.ElementClick += new DevExpress.XtraBars.Navigation.NavElementClickEventHandler(this.navButton3_ElementClick);
-            // 
             // transitionManager1
             // 
             this.transitionManager1.ShowWaitingIndicator = false;
@@ -126,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 553);
+            this.ClientSize = new System.Drawing.Size(956, 599);
             this.Controls.Add(this.tnavbarMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("MaPosMainForm.IconOptions.LargeImage")));
@@ -147,8 +129,6 @@
         private DevExpress.XtraBars.Navigation.NavButton nbtnInfo;
         private DevExpress.XtraBars.Navigation.NavButton nbtnMin;
         private DevExpress.XtraBars.Navigation.NavButton nbtnClose;
-        private DevExpress.XtraBars.Navigation.NavButton navButton2;
-        private DevExpress.XtraBars.Navigation.NavButton navButton3;
         private DevExpress.Utils.Animation.TransitionManager transitionManager1;
     }
 }

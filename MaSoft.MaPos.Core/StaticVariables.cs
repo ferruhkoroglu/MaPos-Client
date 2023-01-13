@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MaSoft.MaPos.Core
 {
-    public static class StaticVariables
+    public static partial class StaticVariables
     {
         public static string HostIp = "...";
         public static string UserName = "root";

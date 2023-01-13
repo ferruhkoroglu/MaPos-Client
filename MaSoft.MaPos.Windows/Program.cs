@@ -13,9 +13,8 @@ using DevExpress.Xpo.DB;
 using MaSoft.MaPos.Core;
 using MaSoft.MaPos.Models;
 
-using MessageHelper = MaSoft.MaPos.Windows.MessageHelper;
 using MaSoft.MaPos.Models.MaPos;
-using System.ServiceModel.Channels;
+using MessageHelper = MaSoft.MaPos.Windows.MessageHelper;
 
 namespace MaSoft.MaPos.Windows
 {
@@ -86,7 +85,7 @@ namespace MaSoft.MaPos.Windows
             splashForm.ShowDialog();
 
             // Wxi Sharpness özellikle set ediliyor..           
-            UserLookAndFeel.Default.SetSkinStyle(SkinSvgPalette.WXICompact.Sharpness);
+            UserLookAndFeel.Default.SetSkinStyle(SkinSvgPalette.WXI.Sharpness);
 
             
             frmLogin lgnForm = new frmLogin();
@@ -116,7 +115,14 @@ namespace MaSoft.MaPos.Windows
             //var xpCollection = new XPCollection(typeof(Tables));
             //var tblInfo = XpoDefault.Session.Query<Tables>().ToList();
 
-            Application.Run(new MaPosMainForm());
+
+            // Load Program Settings...
+            ProgramVariables.ProgSettings = XpoDefault.Session.Query<ProgramSettings>().ToList().FirstOrDefault();
+
+            MaPosMainForm mainForm = new MaPosMainForm();
+            MaPosUserControl.mainForm = mainForm;
+
+            Application.Run(mainForm);
         }
     }
 }

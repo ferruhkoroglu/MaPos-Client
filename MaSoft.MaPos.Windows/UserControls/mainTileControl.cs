@@ -13,7 +13,8 @@ using MaSoft.MaPos.Core;
 using MaSoft.MaPos.Windows.Properties;
 
 namespace MaSoft.MaPos.Windows {
-    public partial class mainTileControl: XtraUserControl {
+    public partial class mainTileControl: MaPosUserControl
+    {
         public mainTileControl() {
             InitializeComponent();
         }
@@ -27,46 +28,23 @@ namespace MaSoft.MaPos.Windows {
 
         public void InitEvents()
         {
+            tileControl1.KeyUp += new System.Windows.Forms.KeyEventHandler(TileControlKeyUp);
         }
 
-        void SetBackground() {
+        void SetBackground()
+        {
             tileControl1.BackgroundImage = TileControlBackgroundImage;
-        }
-        void OnTileControlKeyUp(object sender, KeyEventArgs e) {
-            if(e.KeyData == Keys.Escape)
-                Application.Exit();
-        }
-        Image tileControlBackground = null;
-        Image TileControlBackgroundImage {
-            get {
-                if(tileControlBackground == null)
-                    tileControlBackground = CreateBackgroundImage();
-                return tileControlBackground;
-            }
-        }
-        Image CreateBackgroundImage() {
-            Rectangle screenBounds = Screen.FromControl(this).Bounds;
-            Image bottomImg = GetBottomImage();
-            Bitmap img = new Bitmap(screenBounds.Width, screenBounds.Height);
-            using(Graphics graphics = Graphics.FromImage(img)) {
-                using(SolidBrush br = new SolidBrush(Color.FromArgb(36, 0, 64))) {
-                    graphics.FillRectangle(br, new Rectangle(Point.Empty, img.Size));
-                }
-                graphics.DrawImage(bottomImg, 0, screenBounds.Bottom - bottomImg.Height);
-            }
-            return img;
-        }
-        Image GetBottomImage() { return MaSoft.MaPos.Windows.Properties.Resources.Background; }
-
-        public event EventHandler OnDesktopClick;
-
-        private void itemDesktop_ItemClick(object sender, TileItemEventArgs e) {
-            OnDesktopClick.Invoke(this, new EventArgs());
         }
 
         private void itemTableOrder_ItemClick(object sender, TileItemEventArgs e)
         {
-            //this.Parent.Controls.Add();
+            ShowTableOrderPage();
+        }
+
+        private void tileControl1_StartItemDragging(object sender, TileItemDragEventArgs e)
+        {
+            // Tile da drag and drop yapısına şu an gerek yok, daha sonra ana ekran tasarımı kayıt edilebilir ama şu an değil...
+            e.Cancel = true;
         }
     }
 }

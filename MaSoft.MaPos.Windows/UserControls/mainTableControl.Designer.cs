@@ -23,81 +23,50 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
-            this.tileItem1 = new DevExpress.XtraEditors.TileItem();
-            this.tileItem2 = new DevExpress.XtraEditors.TileItem();
-            this.tileItem3 = new DevExpress.XtraEditors.TileItem();
-            this.tileBar1 = new DevExpress.XtraBars.Navigation.TileBar();
-            this.tileBarGroup2 = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.test2 = new DevExpress.XtraBars.Navigation.TileBarGroup();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainTableControl));
+            this.tileNavPane1 = new DevExpress.XtraBars.Navigation.TileNavPane();
+            this.btnMainPage = new DevExpress.XtraBars.Navigation.NavButton();
+            ((System.ComponentModel.ISupportInitialize)(this.tileNavPane1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tileItem1
+            // tileNavPane1
             // 
-            tileItemElement1.Text = "tileItem1";
-            this.tileItem1.Elements.Add(tileItemElement1);
-            this.tileItem1.Id = 60;
-            this.tileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
-            this.tileItem1.Name = "tileItem1";
+            this.tileNavPane1.Buttons.Add(this.btnMainPage);
             // 
-            // tileItem2
+            // tileNavCategory1
             // 
-            tileItemElement2.Text = "tileItem2";
-            this.tileItem2.Elements.Add(tileItemElement2);
-            this.tileItem2.Id = 64;
-            this.tileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
-            this.tileItem2.Name = "tileItem2";
+            this.tileNavPane1.DefaultCategory.Name = "tileNavCategory1";
             // 
-            // tileItem3
             // 
-            tileItemElement3.Text = "tileItem3";
-            this.tileItem3.Elements.Add(tileItemElement3);
-            this.tileItem3.Id = 66;
-            this.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
-            this.tileItem3.Name = "tileItem3";
             // 
-            // tileBar1
+            this.tileNavPane1.DefaultCategory.Tile.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            this.tileNavPane1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tileNavPane1.Location = new System.Drawing.Point(0, 642);
+            this.tileNavPane1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.tileNavPane1.Name = "tileNavPane1";
+            this.tileNavPane1.Size = new System.Drawing.Size(1120, 63);
+            this.tileNavPane1.TabIndex = 3;
             // 
-            this.tileBar1.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            this.tileBar1.Groups.Add(this.tileBarGroup2);
-            this.tileBar1.Groups.Add(this.test2);
-            this.tileBar1.Location = new System.Drawing.Point(494, 396);
-            this.tileBar1.Name = "tileBar1";
-            this.tileBar1.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
-            this.tileBar1.Size = new System.Drawing.Size(265, 174);
-            this.tileBar1.TabIndex = 0;
-            this.tileBar1.Text = "tileBar1";
+            // btnMainPage
             // 
-            // tileBarGroup2
-            // 
-            this.tileBarGroup2.Name = "tileBarGroup2";
-            this.tileBarGroup2.Text = "test1";
-            // 
-            // test2
-            // 
-            this.test2.Name = "test2";
-            this.test2.Text = "test2";
+            this.btnMainPage.Caption = "Ana Sayfa";
+            this.btnMainPage.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.btnMainPage.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnMainPage.ImageOptions.SvgImage")));
+            this.btnMainPage.Name = "btnMainPage";
+            this.btnMainPage.ElementClick += new DevExpress.XtraBars.Navigation.NavElementClickEventHandler(this.btnMainPage_ElementClick);
             // 
             // mainTableControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tileBar1);
+            this.Controls.Add(this.tileNavPane1);
             this.Name = "mainTableControl";
-            this.Padding = new System.Windows.Forms.Padding(2);
-            this.Size = new System.Drawing.Size(1144, 729);
+            this.Size = new System.Drawing.Size(1120, 705);
+            ((System.ComponentModel.ISupportInitialize)(this.tileNavPane1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private DevExpress.XtraEditors.TileItem tileItem1;
-        private DevExpress.XtraEditors.TileItem tileItem2;
-        private DevExpress.XtraEditors.TileItem tileItem3;
-        private DevExpress.XtraBars.Navigation.TileBar tileBar1;
-        private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup2;
-        private DevExpress.XtraBars.Navigation.TileBarGroup test2;
+        private DevExpress.XtraBars.Navigation.TileNavPane tileNavPane1;
+        private DevExpress.XtraBars.Navigation.NavButton btnMainPage;
     }
 }

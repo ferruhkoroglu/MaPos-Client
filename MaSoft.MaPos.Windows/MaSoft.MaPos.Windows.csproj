@@ -44,9 +44,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Update="UserControls\mainTableControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Update="UserControls\mainTableControl.cs" />
   </ItemGroup>
 
   <ItemGroup>

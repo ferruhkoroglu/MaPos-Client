@@ -28,6 +28,7 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame1 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame2 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
@@ -83,12 +84,13 @@
             this.tileControl1.Location = new System.Drawing.Point(2, 2);
             this.tileControl1.MaxId = 68;
             this.tileControl1.Name = "tileControl1";
+            this.tileControl1.Padding = new System.Windows.Forms.Padding(18, 0, 18, 18);
             this.tileControl1.RowCount = 4;
             this.tileControl1.ShowGroupText = true;
             this.tileControl1.ShowText = true;
-            this.tileControl1.Size = new System.Drawing.Size(1140, 725);
+            this.tileControl1.Size = new System.Drawing.Size(1140, 734);
             this.tileControl1.TabIndex = 0;
-            this.tileControl1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OnTileControlKeyUp);
+            this.tileControl1.StartItemDragging += new DevExpress.XtraEditors.TileItemDragEventHandler(this.tileControl1_StartItemDragging);
             // 
             // tileGroup2
             // 
@@ -157,18 +159,28 @@
             // 
             // itemCalendar
             // 
+            this.itemCalendar.AllowAnimation = true;
             this.itemCalendar.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(56)))), ((int)(((byte)(179)))));
             this.itemCalendar.AppearanceItem.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.itemCalendar.AppearanceItem.Normal.Options.UseBackColor = true;
             this.itemCalendar.AppearanceItem.Normal.Options.UseFont = true;
             this.itemCalendar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("itemCalendar.BackgroundImage")));
+            this.itemCalendar.ContentAnimation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
+            tileItemFrame1.Appearance.BackColor = System.Drawing.Color.White;
+            tileItemFrame1.Appearance.Options.UseBackColor = true;
             tileItemFrame1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tileItemFrame1.BackgroundImage")));
-            tileItemFrame1.Interval = 3500;
+            tileItemFrame1.UseBackgroundImage = false;
+            tileItemFrame2.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
+            tileItemFrame2.Appearance.BackColor = System.Drawing.Color.White;
+            tileItemFrame2.Appearance.Options.UseBackColor = true;
+            tileItemFrame2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tileItemFrame2.BackgroundImage")));
+            tileItemFrame2.Interval = 3500;
+            tileItemFrame2.UseBackgroundImage = false;
             this.itemCalendar.Frames.Add(tileItemFrame1);
+            this.itemCalendar.Frames.Add(tileItemFrame2);
             this.itemCalendar.Id = 25;
             this.itemCalendar.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.itemCalendar.Name = "itemCalendar";
-            this.itemCalendar.TextShowMode = DevExpress.XtraEditors.TileItemContentShowMode.Always;
             // 
             // tileGroup3
             // 
@@ -341,7 +353,7 @@
             this.Controls.Add(this.tileControl1);
             this.Name = "mainTileControl";
             this.Padding = new System.Windows.Forms.Padding(2);
-            this.Size = new System.Drawing.Size(1144, 729);
+            this.Size = new System.Drawing.Size(1144, 738);
             this.ResumeLayout(false);
 
         }
