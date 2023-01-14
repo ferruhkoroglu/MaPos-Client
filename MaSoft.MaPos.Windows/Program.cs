@@ -54,12 +54,12 @@ namespace MaSoft.MaPos.Windows
                 StaticVariables.Db = ConfigurationManager.AppSettings["Db"];
                 StaticVariables.DbPassword = ConfigurationManager.AppSettings["DbPassword"];
 
-                /*
+                
                 StaticVariables.HostIp = ".\\SQLEXPRESS01";
                 StaticVariables.UserName = "sa";
                 StaticVariables.DbPassword = "123";
                 StaticVariables.Db = "MaPos";
-                */
+                
 
             }
             catch
