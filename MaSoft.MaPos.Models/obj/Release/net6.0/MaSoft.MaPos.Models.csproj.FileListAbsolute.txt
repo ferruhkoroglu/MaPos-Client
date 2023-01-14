@@ -1,0 +1,16 @@
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Models\bin\Release\net6.0\appsettings.json
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Models\bin\Release\net6.0\MaSoft.MaPos.Models.deps.json
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Models\bin\Release\net6.0\MaSoft.MaPos.Models.dll
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Models\bin\Release\net6.0\MaSoft.MaPos.Models.pdb
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Models\bin\Release\net6.0\MaSoft.MaPos.Core.dll
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Models\bin\Release\net6.0\MaSoft.MaPos.Core.pdb
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Models\obj\Release\net6.0\MaSoft.MaPos.Models.csproj.AssemblyReference.cache
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Models\obj\Release\net6.0\MaSoft.MaPos.Models.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Models\obj\Release\net6.0\MaSoft.MaPos.Models.AssemblyInfoInputs.cache
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Models\obj\Release\net6.0\MaSoft.MaPos.Models.AssemblyInfo.cs
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Models\obj\Release\net6.0\MaSoft.MaPos.Models.csproj.CoreCompileInputs.cache
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Models\obj\Release\net6.0\MaSoft.MaPos.Models.csproj.CopyComplete
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Models\obj\Release\net6.0\MaSoft.MaPos.Models.dll
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Models\obj\Release\net6.0\refint\MaSoft.MaPos.Models.dll
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Models\obj\Release\net6.0\MaSoft.MaPos.Models.pdb
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Models\obj\Release\net6.0\ref\MaSoft.MaPos.Models.dll
