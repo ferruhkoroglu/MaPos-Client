@@ -49,7 +49,8 @@ namespace MaSoft.MaPos.Windows
             pboxLogo.BackColor = Color.Transparent;
             pboxLogo.Image = Resources.background_transparent;
             pboxLogo.Size = new Size(640, 640);
-            pboxLogo.Location = new Point((Width / 2) - 100,182);
+            //pboxLogo.Location = new Point((Width / 2) - 100,182);
+            pboxLogo.Location = new Point((Width / 2) - 300, 182);
 
             //pboxCompanyLogo.Image = LocalHelper.ConvertSvgToBitmap_FromResource(Resources.mapos_svg, 307, 104);
 

@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="arayanlar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arayanlar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win8.1_Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -126,6 +129,9 @@
   </data>
   <data name="Calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win8.1_Calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cikis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cikis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="close_svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -138,6 +144,9 @@
   </data>
   <data name="HelpTips" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win8.1_HelpTips1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hizli_satis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hizli_satis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,16 +169,37 @@
   <data name="mapos_white_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mapos_white_logo.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="masa_satis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\masa_satis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="masraf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\masraf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="minimize_svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimize.svg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mola" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mola.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="News" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win8.1_News.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="odeme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\odeme.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paket_satis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paket_satis.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="People" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win8.1_people.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="raporlar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\raporlar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SplashPicture" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SplashPicture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tahsilat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tahsilat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

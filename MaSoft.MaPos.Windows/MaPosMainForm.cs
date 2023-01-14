@@ -40,8 +40,8 @@ namespace MaSoft.MaPos.Windows
             pnlMain.Text = "";
             Controls.Add(pnlMain);
 
-            pnlMain.TransitionAnimationProperties.FrameCount = 100;
-            pnlMain.TransitionAnimationProperties.FrameInterval = 1000;
+            pnlMain.TransitionAnimationProperties.FrameCount = 350;
+            pnlMain.TransitionAnimationProperties.FrameInterval = 3000;
             pnlMain.TransitionType = DevExpress.Utils.Animation.Transitions.PushFade;
 
             pageMain = new NavigationPage();

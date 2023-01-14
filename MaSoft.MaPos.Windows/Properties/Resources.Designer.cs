@@ -63,6 +63,16 @@ namespace MaSoft.MaPos.Windows.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arayanlar {
+            get {
+                object obj = ResourceManager.GetObject("arayanlar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Background {
             get {
                 object obj = ResourceManager.GetObject("Background", resourceCulture);
@@ -86,6 +96,16 @@ namespace MaSoft.MaPos.Windows.Properties {
         internal static System.Drawing.Bitmap Calendar {
             get {
                 object obj = ResourceManager.GetObject("Calendar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cikis {
+            get {
+                object obj = ResourceManager.GetObject("cikis", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +146,16 @@ namespace MaSoft.MaPos.Windows.Properties {
         internal static System.Drawing.Bitmap HelpTips {
             get {
                 object obj = ResourceManager.GetObject("HelpTips", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hizli_satis {
+            get {
+                object obj = ResourceManager.GetObject("hizli_satis", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -201,6 +231,26 @@ namespace MaSoft.MaPos.Windows.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap masa_satis {
+            get {
+                object obj = ResourceManager.GetObject("masa_satis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap masraf {
+            get {
+                object obj = ResourceManager.GetObject("masraf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] minimize_svg {
@@ -213,9 +263,39 @@ namespace MaSoft.MaPos.Windows.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mola {
+            get {
+                object obj = ResourceManager.GetObject("mola", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap News {
             get {
                 object obj = ResourceManager.GetObject("News", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap odeme {
+            get {
+                object obj = ResourceManager.GetObject("odeme", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paket_satis {
+            get {
+                object obj = ResourceManager.GetObject("paket_satis", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +313,29 @@ namespace MaSoft.MaPos.Windows.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap raporlar {
+            get {
+                object obj = ResourceManager.GetObject("raporlar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SplashPicture {
             get {
                 object obj = ResourceManager.GetObject("SplashPicture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tahsilat {
+            get {
+                object obj = ResourceManager.GetObject("tahsilat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
