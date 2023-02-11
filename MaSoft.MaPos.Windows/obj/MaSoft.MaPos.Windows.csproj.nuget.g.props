@@ -17,8 +17,8 @@
     <Import Project="C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.data.desktop\22.2.3\build\netcoreapp3.0\DevExpress.Data.Desktop.props" Condition="Exists('C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.data.desktop\22.2.3\build\netcoreapp3.0\DevExpress.Data.Desktop.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgDevExpress_Data Condition=" '$(PkgDevExpress_Data)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.data\22.2.3</PkgDevExpress_Data>
-    <PkgDevExpress_Xpo Condition=" '$(PkgDevExpress_Xpo)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.xpo\22.2.3</PkgDevExpress_Xpo>
+    <PkgDevExpress_Data Condition=" '$(PkgDevExpress_Data)' == '' ">C:\Users\FK\.nuget\packages\devexpress.data\22.2.3</PkgDevExpress_Data>
+    <PkgDevExpress_Xpo Condition=" '$(PkgDevExpress_Xpo)' == '' ">C:\Users\FK\.nuget\packages\devexpress.xpo\22.2.3</PkgDevExpress_Xpo>
     <PkgDevExpress_Utils Condition=" '$(PkgDevExpress_Utils)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.utils\22.2.3</PkgDevExpress_Utils>
     <PkgDevExpress_Win_Navigation Condition=" '$(PkgDevExpress_Win_Navigation)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.win.navigation\22.2.3</PkgDevExpress_Win_Navigation>
     <PkgDevExpress_Win_TreeList Condition=" '$(PkgDevExpress_Win_TreeList)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.win.treelist\22.2.3</PkgDevExpress_Win_TreeList>
@@ -30,7 +30,7 @@
     <PkgDevExpress_Win_PivotGrid Condition=" '$(PkgDevExpress_Win_PivotGrid)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.win.pivotgrid\22.2.3</PkgDevExpress_Win_PivotGrid>
     <PkgDevExpress_Win_Diagram Condition=" '$(PkgDevExpress_Win_Diagram)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.win.diagram\22.2.3</PkgDevExpress_Win_Diagram>
     <PkgDevExpress_Win Condition=" '$(PkgDevExpress_Win)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.win\22.2.3</PkgDevExpress_Win>
-    <PkgDevExpress_DataAccess Condition=" '$(PkgDevExpress_DataAccess)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.dataaccess\22.2.3</PkgDevExpress_DataAccess>
+    <PkgDevExpress_DataAccess Condition=" '$(PkgDevExpress_DataAccess)' == '' ">C:\Users\FK\.nuget\packages\devexpress.dataaccess\22.2.3</PkgDevExpress_DataAccess>
     <PkgDevExpress_DataAccess_UI Condition=" '$(PkgDevExpress_DataAccess_UI)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.dataaccess.ui\22.2.3</PkgDevExpress_DataAccess_UI>
     <PkgDevExpress_Win_Spreadsheet Condition=" '$(PkgDevExpress_Win_Spreadsheet)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.win.spreadsheet\22.2.3</PkgDevExpress_Win_Spreadsheet>
     <PkgDevExpress_Win_SpellChecker Condition=" '$(PkgDevExpress_Win_SpellChecker)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.win.spellchecker\22.2.3</PkgDevExpress_Win_SpellChecker>

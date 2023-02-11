@@ -4,22 +4,35 @@ using System.Drawing;
 using System.Windows.Forms;
 using MaSoft.MaPos.Windows.Properties;
 using System.Xml;
+using Animation = DevExpress.Utils.Animation;
 
 namespace MaSoft.MaPos.Windows
 {
     public partial class MaPosMainForm : DevExpress.XtraEditors.XtraForm
     {
+        Timer tmrDateTimeInfo;
+
         mainTileControl ucMain;
 
         NavigationFrame pnlMain;
         mainTableControl ucTable;
+        mainLoginControl ucLogin;
 
+        NavigationPage pageLogin;
         NavigationPage pageMain;
         NavigationPage pageTable;
 
         public MaPosMainForm()
         {
+            tmrDateTimeInfo = new Timer();
+            tmrDateTimeInfo.Interval = 1000;
+            tmrDateTimeInfo.Tick += new EventHandler(tmr_DateTimeInfo_Trick);
+            tmrDateTimeInfo.Start();
+
             InitializeComponent();
+
+            LoadDateTimeInfo();
+            Application.DoEvents();
 
             CreatePanels();
             InitMainObjects();
@@ -30,6 +43,7 @@ namespace MaSoft.MaPos.Windows
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
 
+            #region NavigationPanel
             pnlMain = new NavigationFrame();
             pnlMain.Dock = DockStyle.Bottom;
             pnlMain.Anchor = (AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom);
@@ -42,8 +56,22 @@ namespace MaSoft.MaPos.Windows
 
             pnlMain.TransitionAnimationProperties.FrameCount = 350;
             pnlMain.TransitionAnimationProperties.FrameInterval = 3000;
-            pnlMain.TransitionType = DevExpress.Utils.Animation.Transitions.PushFade;
+            pnlMain.TransitionType = Animation.Transitions.PushFade;
+            pnlMain.SelectedPageChanged += SelectedPageChangedEventHandler;
+            #endregion
 
+            #region Login
+            pageLogin = new NavigationPage();
+            pnlMain.Pages.Add(pageLogin);
+
+            ucLogin = new mainLoginControl();
+            ucLogin.Dock = DockStyle.Fill;
+            ucLogin.Name = "mainLoginControl";
+            ucLogin.Visible = true;
+            pageLogin.Controls.Add(ucLogin);
+            #endregion
+
+            #region TileControl
             pageMain = new NavigationPage();
             pnlMain.Pages.Add(pageMain);
 
@@ -52,7 +80,9 @@ namespace MaSoft.MaPos.Windows
             ucMain.Name = "mainTileControl";
             ucMain.Visible = true;
             pageMain.Controls.Add(ucMain);
+            #endregion
 
+            #region Tables
             pageTable = new NavigationPage();
             pnlMain.Pages.Add(pageTable);
 
@@ -61,14 +91,37 @@ namespace MaSoft.MaPos.Windows
             ucTable.Name = "mainTableControl";
             ucTable.Visible = true;
             pageTable.Controls.Add(ucTable);
+            #endregion Tables
 
-            pnlMain.SelectedPage = pageMain;
+
+            pnlMain.SelectedPage = pageLogin;
 
             /*
             tnavbarMain.AllowGlyphSkinning = true;
             tnavbarMain.LookAndFeel.UseDefaultLookAndFeel = false;
             tnavbarMain.LookAndFeel.SkinName = "Basic";
             */
+        }
+
+        public void SelectedPageChangedEventHandler(object sender, SelectedPageChangedEventArgs e)
+        {
+            if (e.Page == pageLogin)
+            {
+                if (((NavigationPage)e.Page).Controls.Count > 0)
+                {
+                    var ucLogin = (((NavigationPage)e.Page).Controls[0] as mainLoginControl);
+                    var edtControl = ucLogin.Controls["edtPassword"];
+                    if (edtControl != null)
+                        edtControl.Focus();
+                }
+            }
+
+            //...
+        }
+
+        private void PnlMain_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         public void ShowMainMenu()
@@ -78,6 +131,10 @@ namespace MaSoft.MaPos.Windows
         public void ShowTableOrder()
         {
             pnlMain.SelectedPage = pageTable;
+        }
+        public void ShowLogin()
+        {
+            pnlMain.SelectedPage = pageLogin;
         }
 
         void InitMainObjects()
@@ -102,14 +159,17 @@ namespace MaSoft.MaPos.Windows
             nbtnClose.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
         }
 
-        void CloseApp()
+        public void CloseApp(bool IsQuestion = true)
         {
-            DialogResult QuestionResult = MessageHelper.QuestionMsg("MaPos Adisyon", "Programı kapatmak istediğinize emin misiniz ?");
-            if (QuestionResult == DialogResult.Yes)
+            if (IsQuestion)
+            {
+                DialogResult QuestionResult = MessageHelper.QuestionMsg("MaPos Adisyon", "Programı kapatmak istediğinize emin misiniz ?");
+                if (QuestionResult == DialogResult.Yes)
+                    Application.Exit();
+            }
+            else
                 Application.Exit();
         }
-
-
         private void navButton2_ElementClick(object sender, DevExpress.XtraBars.Navigation.NavElementEventArgs e)
         {
             pnlMain.SelectedPage = pageTable;
@@ -119,5 +179,22 @@ namespace MaSoft.MaPos.Windows
         {
             pnlMain.SelectedPage = pageMain;
         }
+
+        string GetDateTimeInfo()
+        {
+            return DateTime.Now.ToString() + " " + DateTime.Now.ToString("dddd");
+        }
+
+        void LoadDateTimeInfo()
+        {
+            lblDateTimeInfo.Text = GetDateTimeInfo();
+        }
+
+        void tmr_DateTimeInfo_Trick(object sender, EventArgs e)
+        {
+            LoadDateTimeInfo();
+            Application.DoEvents();
+        }
+
     }
 }

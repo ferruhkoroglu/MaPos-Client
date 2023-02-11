@@ -45,6 +45,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Update="UserControls\mainTableControl.cs" />
+    <Compile Update="UserControls\mainLoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

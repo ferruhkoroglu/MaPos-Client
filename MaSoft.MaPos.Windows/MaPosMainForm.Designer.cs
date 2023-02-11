@@ -37,6 +37,7 @@
             this.nbtnMin = new DevExpress.XtraBars.Navigation.NavButton();
             this.nbtnClose = new DevExpress.XtraBars.Navigation.NavButton();
             this.transitionManager1 = new DevExpress.Utils.Animation.TransitionManager(this.components);
+            this.lblDateTimeInfo = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.lcntrlMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tnavbarMain)).BeginInit();
@@ -62,6 +63,8 @@
             // 
             // tnavbarMain
             // 
+            this.tnavbarMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tnavbarMain.Buttons.Add(this.nbtnInfo);
             this.tnavbarMain.Buttons.Add(this.nbtnMin);
             this.tnavbarMain.Buttons.Add(this.nbtnClose);
@@ -73,7 +76,6 @@
             // 
             // 
             this.tnavbarMain.DefaultCategory.Tile.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            this.tnavbarMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.tnavbarMain.Location = new System.Drawing.Point(0, 0);
             this.tnavbarMain.Name = "tnavbarMain";
             this.tnavbarMain.Size = new System.Drawing.Size(956, 40);
@@ -104,11 +106,25 @@
             // 
             this.transitionManager1.ShowWaitingIndicator = false;
             // 
+            // lblDateTimeInfo
+            // 
+            this.lblDateTimeInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDateTimeInfo.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDateTimeInfo.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblDateTimeInfo.Appearance.Options.UseFont = true;
+            this.lblDateTimeInfo.Appearance.Options.UseForeColor = true;
+            this.lblDateTimeInfo.Location = new System.Drawing.Point(556, 12);
+            this.lblDateTimeInfo.Name = "lblDateTimeInfo";
+            this.lblDateTimeInfo.Size = new System.Drawing.Size(90, 19);
+            this.lblDateTimeInfo.TabIndex = 18;
+            this.lblDateTimeInfo.Text = "01.01.2023";
+            // 
             // MaPosMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 599);
+            this.Controls.Add(this.lblDateTimeInfo);
             this.Controls.Add(this.tnavbarMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("MaPosMainForm.IconOptions.LargeImage")));
@@ -119,6 +135,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tnavbarMain)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -130,5 +147,6 @@
         private DevExpress.XtraBars.Navigation.NavButton nbtnMin;
         private DevExpress.XtraBars.Navigation.NavButton nbtnClose;
         private DevExpress.Utils.Animation.TransitionManager transitionManager1;
+        private DevExpress.XtraEditors.LabelControl lblDateTimeInfo;
     }
 }

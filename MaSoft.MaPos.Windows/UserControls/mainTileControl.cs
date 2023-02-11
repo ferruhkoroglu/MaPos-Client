@@ -46,5 +46,10 @@ namespace MaSoft.MaPos.Windows {
             // Tile da drag and drop yapısına şu an gerek yok, daha sonra ana ekran tasarımı kayıt edilebilir ama şu an değil...
             e.Cancel = true;
         }
+
+        private void itemExit_ItemClick(object sender, TileItemEventArgs e)
+        {
+            ShowLoginPage();
+        }
     }
 }

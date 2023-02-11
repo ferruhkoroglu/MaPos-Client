@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors.TextEditController.Win32;
 using DevExpress.XtraSplashScreen;
@@ -20,6 +21,7 @@ namespace MaSoft.MaPos.Windows {
         private Timer tmrClose;
 
         public bool Loaded = false;
+        internal Action _initMethod;
 
         public MaPosSplashForm(Action InitMethod) {
             InitializeComponent();
@@ -40,7 +42,15 @@ namespace MaSoft.MaPos.Windows {
             tmrClose.Start();
 
             // Splash esnasýnda çalýþmasýný istediðimiz method larý initialize etsin...
-            InitMethod.Invoke();
+            _initMethod = InitMethod;
+        }
+
+        protected override void OnShown(EventArgs e)
+        {
+            // Açýlýrken thread start..
+            Task.Run(() => { _initMethod.Invoke(); });
+
+            base.OnShown(e);
         }
 
         void tmr_Tick(object sender, EventArgs e) {

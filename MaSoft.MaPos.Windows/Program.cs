@@ -15,6 +15,7 @@ using MaSoft.MaPos.Models;
 
 using MaSoft.MaPos.Models.MaPos;
 using MessageHelper = MaSoft.MaPos.Windows.MessageHelper;
+using Microsoft.Extensions.Configuration;
 
 namespace MaSoft.MaPos.Windows
 {
@@ -42,7 +43,6 @@ namespace MaSoft.MaPos.Windows
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
 
             // Load Config Info..
             #region LoadConfig Info
@@ -93,19 +93,22 @@ namespace MaSoft.MaPos.Windows
             MaPosSplashForm splashForm = new MaPosSplashForm(() => { LocalHelper.WarmUp(); });
             splashForm.ShowDialog();
 
+
             // Wxi Sharpness özellikle set ediliyor..           
             UserLookAndFeel.Default.SetSkinStyle(SkinSvgPalette.WXI.Sharpness);
 
             
-            frmLogin lgnForm = new frmLogin();
-            lgnForm.ShowDialog();
+            //frmLogin lgnForm = new frmLogin();
+            //lgnForm.ShowDialog();
 
             // Eğer User Authentication sağlanmamış ise !
+            /*
             if (!StaticVariables.UserAuthenticated)
             {
                 Application.Exit();
                 return;
             }
+            */
             
 
             // ORM Initialize...            

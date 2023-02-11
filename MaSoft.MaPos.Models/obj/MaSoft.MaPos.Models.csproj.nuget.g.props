@@ -14,7 +14,7 @@
     <SourceRoot Include="C:\Program Files\DevExpress 22.2\Components\Offline Packages\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgDevExpress_Data Condition=" '$(PkgDevExpress_Data)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.data\22.2.3</PkgDevExpress_Data>
-    <PkgDevExpress_Xpo Condition=" '$(PkgDevExpress_Xpo)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.xpo\22.2.3</PkgDevExpress_Xpo>
+    <PkgDevExpress_Data Condition=" '$(PkgDevExpress_Data)' == '' ">C:\Users\FK\.nuget\packages\devexpress.data\22.2.3</PkgDevExpress_Data>
+    <PkgDevExpress_Xpo Condition=" '$(PkgDevExpress_Xpo)' == '' ">C:\Users\FK\.nuget\packages\devexpress.xpo\22.2.3</PkgDevExpress_Xpo>
   </PropertyGroup>
 </Project>

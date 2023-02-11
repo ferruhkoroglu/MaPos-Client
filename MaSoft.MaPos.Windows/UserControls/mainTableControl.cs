@@ -144,7 +144,6 @@ namespace MaSoft.MaPos.Windows {
             tileNavPane1.Buttons.Add(navButton4);
         }
 
-
         void LoadTables(int TableID = 0)
         {
             // Gruptaki mevcut nesneler öncelikler silinir...

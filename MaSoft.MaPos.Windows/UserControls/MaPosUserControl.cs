@@ -15,18 +15,27 @@ namespace MaSoft.MaPos.Windows
     {
         public static MaPosMainForm mainForm = null;
 
+        public void CloseApp(bool IsQuestion = true)
+        {
+            if (mainForm != null)
+                mainForm.CloseApp(IsQuestion);
+        }
+
         public void ShowMainMenu()
         {
-            if (mainForm != null) {
+            if (mainForm != null) 
                 mainForm.ShowMainMenu();
-            }
         }
 
         public void ShowTableOrderPage()
         {
-            if (mainForm != null) {
+            if (mainForm != null)
                 mainForm.ShowTableOrder();
-            }
+        }
+        public void ShowLoginPage()
+        {
+            if (mainForm != null)
+                mainForm.ShowLogin();
         }
 
         protected void TileControlKeyUp(object sender, KeyEventArgs e)

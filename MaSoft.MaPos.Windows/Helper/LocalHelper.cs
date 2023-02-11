@@ -17,6 +17,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -29,19 +30,19 @@ namespace MaSoft.MaPos.Windows
         public static void WarmUp()
         {
             // Amaç, ilk açılış sonrasında, yazılımı hızlandırmak...
-            System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(ImagesAssemblyType).TypeHandle);
-            System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(TileControl).TypeHandle);
-            System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(AppearanceObject).TypeHandle);
-            System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(BaseEdit).TypeHandle);
-            System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(DevExpress.DataAccess.Sql.SqlDataSource).TypeHandle);
-            System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(DevExpress.DataAccess.UI.FilterEditorControl).TypeHandle);
-            System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(GridControl).TypeHandle);
-            System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(SpreadsheetControl).TypeHandle);
-            System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(ChartControl).TypeHandle);
-            System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(GaugeControl).TypeHandle);
-            System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(PivotGridControl).TypeHandle);
-            System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(XtraReport).TypeHandle);
-            System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(typeof(PdfViewer).TypeHandle);
+            RuntimeHelpers.RunClassConstructor(typeof(ImagesAssemblyType).TypeHandle);
+            RuntimeHelpers.RunClassConstructor(typeof(TileControl).TypeHandle);
+            RuntimeHelpers.RunClassConstructor(typeof(AppearanceObject).TypeHandle);
+            RuntimeHelpers.RunClassConstructor(typeof(BaseEdit).TypeHandle);
+            RuntimeHelpers.RunClassConstructor(typeof(DevExpress.DataAccess.Sql.SqlDataSource).TypeHandle);
+            RuntimeHelpers.RunClassConstructor(typeof(DevExpress.DataAccess.UI.FilterEditorControl).TypeHandle);
+            RuntimeHelpers.RunClassConstructor(typeof(GridControl).TypeHandle);
+            RuntimeHelpers.RunClassConstructor(typeof(SpreadsheetControl).TypeHandle);
+            RuntimeHelpers.RunClassConstructor(typeof(ChartControl).TypeHandle);
+            RuntimeHelpers.RunClassConstructor(typeof(GaugeControl).TypeHandle);
+            RuntimeHelpers.RunClassConstructor(typeof(PivotGridControl).TypeHandle);
+            RuntimeHelpers.RunClassConstructor(typeof(XtraReport).TypeHandle);
+            RuntimeHelpers.RunClassConstructor(typeof(PdfViewer).TypeHandle);
         }
 
         public static void ApplyTouchMode()
@@ -57,7 +58,7 @@ namespace MaSoft.MaPos.Windows
             int MiliSeconds = (Seconds * 1000);
             while (((Environment.TickCount - CurrTickCount) <= MiliSeconds) && (!AppHelper.InternetConnectionExist()))
             {
-                Thread.Sleep(50);
+                Thread.Sleep(25);
                 Application.DoEvents();
             }
 

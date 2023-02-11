@@ -4,8 +4,8 @@
   "success": true,
   "projectFilePath": "E:\\Projects\\MaPos\\Mapos_Client\\Source\\MaSoft.MaPos.Models\\MaSoft.MaPos.Models.csproj",
   "expectedPackageFiles": [
-    "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages\\devexpress.data\\22.2.3\\devexpress.data.22.2.3.nupkg.sha512",
-    "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages\\devexpress.xpo\\22.2.3\\devexpress.xpo.22.2.3.nupkg.sha512",
+    "C:\\Users\\FK\\.nuget\\packages\\devexpress.data\\22.2.3\\devexpress.data.22.2.3.nupkg.sha512",
+    "C:\\Users\\FK\\.nuget\\packages\\devexpress.xpo\\22.2.3\\devexpress.xpo.22.2.3.nupkg.sha512",
     "C:\\Users\\FK\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\FK\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\2.0.0\\microsoft.extensions.dependencyinjection.2.0.0.nupkg.sha512",
     "C:\\Users\\FK\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.0.0\\microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512",
