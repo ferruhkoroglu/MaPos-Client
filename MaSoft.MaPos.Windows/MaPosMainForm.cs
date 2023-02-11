@@ -5,6 +5,8 @@ using System.Windows.Forms;
 using MaSoft.MaPos.Windows.Properties;
 using System.Xml;
 using Animation = DevExpress.Utils.Animation;
+using DevExpress.XtraBars.Docking2010.Customization;
+using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 
 namespace MaSoft.MaPos.Windows
 {
@@ -119,11 +121,6 @@ namespace MaSoft.MaPos.Windows
             //...
         }
 
-        private void PnlMain_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         public void ShowMainMenu()
         {
             pnlMain.SelectedPage = pageMain;
@@ -159,17 +156,47 @@ namespace MaSoft.MaPos.Windows
             nbtnClose.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
         }
 
+        private bool canCloseFunc(DialogResult parameter)
+        {
+            return parameter != DialogResult.Cancel;
+        }
+
         public void CloseApp(bool IsQuestion = true)
         {
             if (IsQuestion)
             {
+                
                 DialogResult QuestionResult = MessageHelper.QuestionMsg("MaPos Adisyon", "Programı kapatmak istediğinize emin misiniz ?");
                 if (QuestionResult == DialogResult.Yes)
                     Application.Exit();
+                
+
+                /*
+                FlyoutAction action = new FlyoutAction() { Caption = "MaPos Adisyon", Description = "Programı kapatmak istediğinizden emin misiniz ?" };
+                Predicate<DialogResult> predicate = canCloseFunc;
+                
+                FlyoutCommand cmdYes = new FlyoutCommand() { Text = "Evet", Result = System.Windows.Forms.DialogResult.Yes };
+                FlyoutCommand cmdNo = new FlyoutCommand() { Text = "Hayır", Result = System.Windows.Forms.DialogResult.No };
+                
+                action.Commands.Add(cmdYes);
+                action.Commands.Add(cmdNo);
+
+                FlyoutProperties properties = new FlyoutProperties();
+                properties.ButtonSize = new Size(100, 40);
+                properties.Style = FlyoutStyle.MessageBox;
+                properties.AllowHtmlDraw = true;
+                properties.Appearance.BackColor = SystemColors.Highlight;
+
+                if (FlyoutDialog.Show(this, action, properties, predicate) == System.Windows.Forms.DialogResult.Yes)
+                    Application.Exit();
+                */
+                
             }
             else
                 Application.Exit();
         }
+
+
         private void navButton2_ElementClick(object sender, DevExpress.XtraBars.Navigation.NavElementEventArgs e)
         {
             pnlMain.SelectedPage = pageTable;

@@ -609,3 +609,4 @@ E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\obj\Release\net6.0-wi
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\obj\Release\net6.0-windows\win-x64\MaSoft.MaPos.Windows.pdb
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\obj\Release\net6.0-windows\win-x64\MaSoft.MaPos.Windows.genruntimeconfig.cache
 E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\obj\Release\net6.0-windows\win-x64\ref\MaSoft.MaPos.Windows.dll
+E:\Projects\MaPos\Mapos_Client\Source\MaSoft.MaPos.Windows\obj\Release\net6.0-windows\win-x64\MaSoft.MaPos.Windows.mainLoginControl.resources
