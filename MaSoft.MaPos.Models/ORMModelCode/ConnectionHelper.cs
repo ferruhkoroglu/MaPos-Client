@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
+
 namespace MaSoft.MaPos.Models.MaPos
 {
     public static class ConnectionHelper

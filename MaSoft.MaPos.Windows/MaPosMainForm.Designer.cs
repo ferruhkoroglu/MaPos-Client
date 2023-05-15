@@ -38,9 +38,11 @@
             this.nbtnClose = new DevExpress.XtraBars.Navigation.NavButton();
             this.transitionManager1 = new DevExpress.Utils.Animation.TransitionManager(this.components);
             this.lblDateTimeInfo = new DevExpress.XtraEditors.LabelControl();
+            this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.lcntrlMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tnavbarMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // lcntrlMain
@@ -119,6 +121,10 @@
             this.lblDateTimeInfo.TabIndex = 18;
             this.lblDateTimeInfo.Text = "01.01.2023";
             // 
+            // applicationMenu1
+            // 
+            this.applicationMenu1.Name = "applicationMenu1";
+            // 
             // MaPosMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -134,6 +140,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lcntrlMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tnavbarMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +155,6 @@
         private DevExpress.XtraBars.Navigation.NavButton nbtnClose;
         private DevExpress.Utils.Animation.TransitionManager transitionManager1;
         private DevExpress.XtraEditors.LabelControl lblDateTimeInfo;
+        private DevExpress.XtraBars.Ribbon.ApplicationMenu applicationMenu1;
     }
 }

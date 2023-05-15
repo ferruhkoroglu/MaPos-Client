@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,10 +8,19 @@ using System.Windows.Forms;
 using DevExpress.Utils;
 using DevExpress.Utils.Html;
 using DevExpress.Utils.Svg;
+using DevExpress.XtraBars.Docking2010.Customization;
+using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
+using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 
 namespace MaSoft.MaPos.Windows
 {
+    public enum MessageType
+    {
+        Normal = 0 ,
+        Flyout = 1
+    }
+
     public static class MessageHelper
     {
         private static HtmlTemplateCollection? htmlContainer;
@@ -89,7 +99,7 @@ namespace MaSoft.MaPos.Windows
             //
         }
 
-        public static void ErrorMsg(string HeaderCaption, string MsgInfo)
+        public static void ErrorMsg(string HeaderCaption, string MsgInfo, MessageType msgType = MessageType.Normal)
         {
             XtraMessageBoxArgs args = new XtraMessageBoxArgs();
 
@@ -103,7 +113,7 @@ namespace MaSoft.MaPos.Windows
             var result = XtraMessageBox.Show(args);
         }
 
-        public static void SuccessMsg(string HeaderCaption, string MsgInfo)
+        public static void SuccessMsg(string HeaderCaption, string MsgInfo, MessageType msgType = MessageType.Normal)
         {
             XtraMessageBoxArgs args = new XtraMessageBoxArgs();
 
@@ -119,24 +129,53 @@ namespace MaSoft.MaPos.Windows
             var result = XtraMessageBox.Show(args);
         }
 
+        private static bool canCloseFunc(DialogResult parameter)
+        {
+            return parameter != DialogResult.Cancel;
+        }
+
         /* 
          * Örnek Kullanım...
          * DialogResult QuestionResult =  MessageHelper.QuestionMsg("Veritabanı bilgileri", "Girilen bilgiler doğru mu ?");
            if (QuestionResult == DialogResult.No)
             return;
          */
-        public static DialogResult QuestionMsg(string HeaderCaption, string MsgInfo)
+        public static DialogResult QuestionMsg(string HeaderCaption, string MsgInfo, MessageType msgType = MessageType.Normal, XtraForm ownerForm = null)
         {
-            XtraMessageBoxArgs args = new XtraMessageBoxArgs();
-            args.HtmlTemplate.Assign(htmlContainer[2]);
-            args.HtmlImages = svgImageCollection1;
+            DialogResult result;
+            if (msgType == MessageType.Normal)
+            {
+                XtraMessageBoxArgs args = new XtraMessageBoxArgs();
+                args.HtmlTemplate.Assign(htmlContainer[2]);
+                args.HtmlImages = svgImageCollection1;
 
-            args.Caption = HeaderCaption;
-            args.Text = MsgInfo;
+                args.Caption = HeaderCaption;
+                args.Text = MsgInfo;
 
-            args.DefaultButtonIndex = 0;
-            
-            var result = XtraMessageBox.Show(args);
+                args.DefaultButtonIndex = 0;
+
+                result = XtraMessageBox.Show(args);
+            }
+            else
+            {
+                FlyoutAction action = new FlyoutAction() { Caption = "MaPos Adisyon", Description = "Programı kapatmak istediğinizden emin misiniz ?" };
+                Predicate<DialogResult> predicate = canCloseFunc;
+
+                FlyoutCommand cmdYes = new FlyoutCommand() { Text = "Evet", Result = System.Windows.Forms.DialogResult.Yes };
+                FlyoutCommand cmdNo = new FlyoutCommand() { Text = "Hayır", Result = System.Windows.Forms.DialogResult.No };
+
+                action.Commands.Add(cmdYes);
+                action.Commands.Add(cmdNo);
+
+                FlyoutProperties properties = new FlyoutProperties();
+                properties.ButtonSize = new Size(100, 40);
+                properties.Style = FlyoutStyle.MessageBox;
+                properties.AllowHtmlDraw = true;
+                properties.Appearance.BackColor = SystemColors.Highlight;
+
+                result = FlyoutDialog.Show(ownerForm, action, properties, predicate);  // DialogResult.Yes);
+            }
+
             return result;
         }
     }

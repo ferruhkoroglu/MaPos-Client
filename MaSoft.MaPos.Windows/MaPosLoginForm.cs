@@ -203,7 +203,8 @@ namespace MaSoft.MaPos.Windows
         private bool Authentication(string Password)
         {
             // Authentication Kontrolü ??
-            if (AppHelper.UserAuthentication(Password))
+            /*if (AppHelper.UserAuthentication(Password))*/
+
             {
                 //MessageHelper.SuccessMsg("MaPos Giriş Ekranı", "Programa giriş yapıldı...");
 
@@ -213,12 +214,13 @@ namespace MaSoft.MaPos.Windows
                 edtPassword.Text = "";
                 Close();
             }
+            /*
             else
             {
                 MessageHelper.ErrorMsg("MaPos Giriş Ekranı", "Şifre yanlış veya hatalı !!");
                 edtPassword.Text = "";
             }
-
+            */
 
             return true;
         }
